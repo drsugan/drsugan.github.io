@@ -5,10 +5,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dr. B. Sugan | General Surgery</title>
+<title>Dr. B. Sugan | MS General Surgery</title>
 
 <meta name="description"
-content="Dr. B. Sugan — General Surgery postgraduate, physician consultant and clinical researcher based in Chennai.">
+content="Dr. B. Sugan — MS General Surgery postgraduate, physician consultant and clinical researcher based in Chennai.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,13 +17,18 @@ content="Dr. B. Sugan — General Surgery postgraduate, physician consultant and
 
 <style>
 
+/* =========================================================
+   GLOBAL
+========================================================= */
+
 :root{
     --navy:#071522;
-    --navy2:#0b1d2d;
+    --navy-light:#0b1d2d;
     --teal:#67d5cf;
     --teal-light:#9ae8e3;
     --gold:#d8bd7c;
     --white:#f5f8fb;
+    --soft:#d9e2ea;
     --muted:#9cabb9;
     --border:rgba(255,255,255,.10);
     --card:rgba(255,255,255,.045);
@@ -43,8 +48,16 @@ html{
 body{
     font-family:"DM Sans",sans-serif;
     background:
-        radial-gradient(circle at 15% 10%,rgba(103,213,207,.09),transparent 30%),
-        radial-gradient(circle at 90% 20%,rgba(216,189,124,.07),transparent 25%),
+        radial-gradient(
+            circle at 10% 5%,
+            rgba(103,213,207,.09),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(216,189,124,.06),
+            transparent 25%
+        ),
         var(--navy);
     color:var(--white);
     line-height:1.7;
@@ -54,6 +67,10 @@ body{
 a{
     text-decoration:none;
     color:inherit;
+}
+
+button{
+    font-family:inherit;
 }
 
 .container{
@@ -67,13 +84,13 @@ section{
 
 ::selection{
     background:var(--teal);
-    color:#061018;
+    color:#061019;
 }
 
 
-/* =========================
+/* =========================================================
    NAVIGATION
-========================= */
+========================================================= */
 
 nav{
     position:fixed;
@@ -82,14 +99,15 @@ nav{
     width:100%;
     z-index:1000;
     padding:18px 0;
-    background:rgba(7,21,34,.72);
+    background:rgba(7,21,34,.70);
     backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
     border-bottom:1px solid transparent;
-    transition:.3s;
+    transition:.3s ease;
 }
 
 nav.scrolled{
-    background:rgba(7,21,34,.95);
+    background:rgba(7,21,34,.96);
     border-bottom-color:var(--border);
 }
 
@@ -102,9 +120,10 @@ nav.scrolled{
 }
 
 .logo{
-    font-family:"Manrope";
+    font-family:"Manrope",sans-serif;
     font-size:20px;
     font-weight:800;
+    letter-spacing:-.5px;
 }
 
 .logo span{
@@ -120,7 +139,7 @@ nav.scrolled{
 .nav-links a{
     font-size:13px;
     color:var(--muted);
-    transition:.25s;
+    transition:.25s ease;
 }
 
 .nav-links a:hover{
@@ -132,6 +151,7 @@ nav.scrolled{
     border:1px solid var(--border);
     border-radius:100px;
     font-size:12px;
+    transition:.25s ease;
 }
 
 .nav-contact:hover{
@@ -140,9 +160,9 @@ nav.scrolled{
 }
 
 
-/* =========================
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .hero{
     min-height:100vh;
@@ -153,8 +173,8 @@ nav.scrolled{
 
 .hero-grid{
     display:grid;
-    grid-template-columns:1.25fr .75fr;
-    gap:80px;
+    grid-template-columns:1.2fr .8fr;
+    gap:75px;
     align-items:center;
 }
 
@@ -170,51 +190,58 @@ nav.scrolled{
     margin-bottom:24px;
 }
 
-.eyebrow:before{
+.eyebrow::before{
     content:"";
     width:35px;
     height:1px;
     background:var(--teal);
 }
 
-.hero h1{
-    font-family:"Manrope";
-    font-size:clamp(55px,7vw,92px);
-    line-height:.98;
-    letter-spacing:-5px;
+
+/* IMPORTANT:
+   NAME IS FORCED TO REMAIN ON ONE LINE
+*/
+
+.doctor-name{
+    font-family:"Manrope",sans-serif;
+    font-size:clamp(43px,5.7vw,78px);
+    line-height:1;
+    letter-spacing:-4px;
+    white-space:nowrap;
 }
 
-.hero h1 span{
+.doctor-name span{
     color:var(--teal);
 }
 
 .hero-sub{
-    max-width:700px;
+    max-width:690px;
     margin-top:30px;
     color:var(--muted);
-    font-size:18px;
+    font-size:17px;
+    line-height:1.8;
 }
 
 .hero-tags{
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
-    margin-top:30px;
+    gap:9px;
+    margin-top:28px;
 }
 
 .tag{
-    padding:9px 14px;
+    padding:8px 14px;
     border:1px solid var(--border);
     border-radius:100px;
     background:rgba(255,255,255,.03);
     color:#ccd7e2;
-    font-size:12px;
+    font-size:11px;
 }
 
 .hero-buttons{
     display:flex;
     gap:12px;
-    margin-top:35px;
+    margin-top:34px;
     flex-wrap:wrap;
 }
 
@@ -226,7 +253,7 @@ nav.scrolled{
     display:inline-flex;
     justify-content:center;
     align-items:center;
-    transition:.25s;
+    transition:.25s ease;
 }
 
 .btn-primary{
@@ -250,17 +277,30 @@ nav.scrolled{
 }
 
 
-/* =========================
-   PHOTO
-========================= */
+/* =========================================================
+   PROFILE PHOTO
+========================================================= */
 
 .photo-card{
     position:relative;
-    padding:14px;
+    padding:13px;
     border:1px solid var(--border);
     border-radius:28px;
     background:rgba(255,255,255,.035);
-    box-shadow:0 35px 100px rgba(0,0,0,.30);
+    box-shadow:0 35px 100px rgba(0,0,0,.32);
+}
+
+.photo-card::before{
+    content:"";
+    position:absolute;
+    top:-10px;
+    right:-10px;
+    width:80px;
+    height:80px;
+    border-top:1px solid var(--teal);
+    border-right:1px solid var(--teal);
+    border-radius:0 20px 0 0;
+    opacity:.6;
 }
 
 .photo-card img{
@@ -277,9 +317,10 @@ nav.scrolled{
     left:28px;
     right:28px;
     bottom:28px;
-    padding:17px 20px;
-    background:rgba(7,21,34,.82);
+    padding:16px 19px;
+    background:rgba(7,21,34,.84);
     backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
     border:1px solid rgba(255,255,255,.10);
     border-radius:14px;
 }
@@ -293,15 +334,15 @@ nav.scrolled{
 
 .photo-caption strong{
     display:block;
-    font-family:"Manrope";
+    font-family:"Manrope",sans-serif;
     margin-top:3px;
-    font-size:15px;
+    font-size:14px;
 }
 
 
-/* =========================
-   STATS
-========================= */
+/* =========================================================
+   STAT BAR
+========================================================= */
 
 .stats{
     padding:0 0 80px;
@@ -326,7 +367,7 @@ nav.scrolled{
 
 .stat strong{
     display:block;
-    font-family:"Manrope";
+    font-family:"Manrope",sans-serif;
     font-size:27px;
     color:var(--teal);
 }
@@ -334,14 +375,15 @@ nav.scrolled{
 .stat span{
     display:block;
     color:var(--muted);
-    font-size:11px;
+    font-size:10px;
     margin-top:3px;
+    letter-spacing:.5px;
 }
 
 
-/* =========================
-   SECTION HEAD
-========================= */
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
 
 .section-head{
     max-width:760px;
@@ -358,7 +400,7 @@ nav.scrolled{
 }
 
 .section-head h2{
-    font-family:"Manrope";
+    font-family:"Manrope",sans-serif;
     font-size:clamp(35px,5vw,56px);
     line-height:1.08;
     letter-spacing:-2.5px;
@@ -367,12 +409,13 @@ nav.scrolled{
 .section-head p{
     color:var(--muted);
     margin-top:16px;
+    font-size:14px;
 }
 
 
-/* =========================
+/* =========================================================
    ABOUT
-========================= */
+========================================================= */
 
 .about-grid{
     display:grid;
@@ -385,10 +428,16 @@ nav.scrolled{
     background:var(--card);
     border-radius:20px;
     padding:32px;
+    transition:.25s ease;
+}
+
+.about-card:hover{
+    border-color:rgba(103,213,207,.3);
+    transform:translateY(-3px);
 }
 
 .about-card h3{
-    font-family:"Manrope";
+    font-family:"Manrope",sans-serif;
     font-size:20px;
     margin-bottom:10px;
 }
@@ -399,23 +448,27 @@ nav.scrolled{
 }
 
 
-/* =========================
-   EXPERIENCE
-========================= */
+/* =========================================================
+   EXPERIENCE TIMELINE
+========================================================= */
 
 .timeline{
     position:relative;
     margin-left:10px;
 }
 
-.timeline:before{
+.timeline::before{
     content:"";
     position:absolute;
     top:0;
     bottom:0;
     left:5px;
     width:1px;
-    background:linear-gradient(var(--teal),rgba(103,213,207,0));
+    background:
+        linear-gradient(
+            var(--teal),
+            rgba(103,213,207,0)
+        );
 }
 
 .timeline-item{
@@ -424,7 +477,11 @@ nav.scrolled{
     margin-bottom:55px;
 }
 
-.timeline-item:before{
+.timeline-item:last-child{
+    margin-bottom:0;
+}
+
+.timeline-item::before{
     content:"";
     position:absolute;
     left:0;
@@ -445,7 +502,7 @@ nav.scrolled{
 }
 
 .timeline-item h3{
-    font-family:"Manrope";
+    font-family:"Manrope",sans-serif;
     font-size:22px;
     margin-top:5px;
 }
@@ -456,16 +513,16 @@ nav.scrolled{
 }
 
 .timeline-item p{
-    max-width:800px;
+    max-width:820px;
     color:var(--muted);
-    font-size:14px;
+    font-size:13px;
     margin-top:8px;
 }
 
 
-/* =========================
+/* =========================================================
    EDUCATION
-========================= */
+========================================================= */
 
 .edu-card{
     display:grid;
@@ -476,6 +533,11 @@ nav.scrolled{
     padding:30px;
     border-radius:18px;
     margin-bottom:14px;
+    transition:.25s ease;
+}
+
+.edu-card:hover{
+    border-color:rgba(103,213,207,.28);
 }
 
 .edu-label{
@@ -486,7 +548,7 @@ nav.scrolled{
 }
 
 .edu-card h3{
-    font-family:"Manrope";
+    font-family:"Manrope",sans-serif;
     font-size:20px;
 }
 
@@ -496,9 +558,9 @@ nav.scrolled{
 }
 
 
-/* =========================
-   INTERESTS
-========================= */
+/* =========================================================
+   CLINICAL INTERESTS
+========================================================= */
 
 .interest-grid{
     display:grid;
@@ -511,10 +573,16 @@ nav.scrolled{
     border:1px solid var(--border);
     background:var(--card);
     border-radius:16px;
+    transition:.25s ease;
+}
+
+.interest:hover{
+    transform:translateY(-3px);
+    border-color:rgba(103,213,207,.28);
 }
 
 .interest strong{
-    font-family:"Manrope";
+    font-family:"Manrope",sans-serif;
     font-size:14px;
 }
 
@@ -525,9 +593,9 @@ nav.scrolled{
 }
 
 
-/* =========================
+/* =========================================================
    COURSES
-========================= */
+========================================================= */
 
 .filters{
     display:flex;
@@ -543,8 +611,8 @@ nav.scrolled{
     background:transparent;
     color:var(--muted);
     cursor:pointer;
-    font-family:"DM Sans";
     font-size:11px;
+    transition:.25s ease;
 }
 
 .filter.active,
@@ -565,7 +633,7 @@ nav.scrolled{
     border:1px solid var(--border);
     background:var(--card);
     border-radius:17px;
-    transition:.25s;
+    transition:.25s ease;
 }
 
 .course:hover{
@@ -582,7 +650,7 @@ nav.scrolled{
 }
 
 .course h3{
-    font-family:"Manrope";
+    font-family:"Manrope",sans-serif;
     font-size:15px;
     line-height:1.4;
     margin-top:8px;
@@ -595,9 +663,9 @@ nav.scrolled{
 }
 
 
-/* =========================
+/* =========================================================
    RESEARCH
-========================= */
+========================================================= */
 
 .research-grid{
     display:grid;
@@ -610,11 +678,12 @@ nav.scrolled{
     background:var(--card);
     padding:30px;
     border-radius:20px;
-    transition:.25s;
+    transition:.25s ease;
 }
 
 .research-card:hover{
     border-color:rgba(103,213,207,.3);
+    transform:translateY(-3px);
 }
 
 .research-type{
@@ -626,7 +695,7 @@ nav.scrolled{
 }
 
 .research-card h3{
-    font-family:"Manrope";
+    font-family:"Manrope",sans-serif;
     font-size:19px;
     line-height:1.4;
     margin-top:10px;
@@ -646,9 +715,9 @@ nav.scrolled{
 }
 
 
-/* =========================
+/* =========================================================
    MEMBERSHIPS
-========================= */
+========================================================= */
 
 .membership-grid{
     display:grid;
@@ -661,10 +730,16 @@ nav.scrolled{
     background:var(--card);
     padding:25px;
     border-radius:17px;
+    transition:.25s ease;
+}
+
+.membership:hover{
+    transform:translateY(-3px);
+    border-color:rgba(103,213,207,.28);
 }
 
 .membership h3{
-    font-family:"Manrope";
+    font-family:"Manrope",sans-serif;
     font-size:15px;
 }
 
@@ -675,14 +750,18 @@ nav.scrolled{
 }
 
 
-/* =========================
+/* =========================================================
    CV
-========================= */
+========================================================= */
 
 .cv{
     border:1px solid rgba(103,213,207,.2);
     background:
-        radial-gradient(circle at 85% 20%,rgba(103,213,207,.12),transparent 30%),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(103,213,207,.12),
+            transparent 30%
+        ),
         var(--card);
     border-radius:25px;
     padding:50px;
@@ -693,7 +772,7 @@ nav.scrolled{
 }
 
 .cv h2{
-    font-family:"Manrope";
+    font-family:"Manrope",sans-serif;
     font-size:31px;
 }
 
@@ -703,9 +782,9 @@ nav.scrolled{
 }
 
 
-/* =========================
+/* =========================================================
    CONTACT
-========================= */
+========================================================= */
 
 .contact{
     text-align:center;
@@ -735,9 +814,9 @@ nav.scrolled{
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer{
     border-top:1px solid var(--border);
@@ -752,9 +831,9 @@ footer{
 }
 
 
-/* =========================
-   ANIMATION
-========================= */
+/* =========================================================
+   SCROLL ANIMATION
+========================================================= */
 
 .reveal{
     opacity:0;
@@ -768,9 +847,9 @@ footer{
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
 
 @media(max-width:950px){
 
@@ -780,10 +859,12 @@ footer{
 
     .hero-grid{
         grid-template-columns:1fr;
+        gap:55px;
     }
 
     .photo-card{
         max-width:500px;
+        width:100%;
         margin:auto;
     }
 
@@ -807,6 +888,10 @@ footer{
 }
 
 
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
 @media(max-width:600px){
 
     section{
@@ -822,13 +907,29 @@ footer{
         padding-top:120px;
     }
 
-    .hero h1{
-        font-size:52px;
-        letter-spacing:-3px;
+    /*
+       Name stays on ONE LINE.
+       Smaller font is used on phones so
+       "Dr. B. Sugan" does not wrap.
+    */
+
+    .doctor-name{
+        font-size:40px;
+        letter-spacing:-2.5px;
+        white-space:nowrap;
     }
 
     .hero-sub{
-        font-size:16px;
+        font-size:15px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
     }
 
     .photo-card img{
@@ -841,6 +942,10 @@ footer{
 
     .stat{
         border-bottom:1px solid var(--border);
+    }
+
+    .stat:nth-child(2){
+        border-right:none;
     }
 
     .course-grid,
@@ -860,14 +965,38 @@ footer{
 
     .cv .btn{
         margin-top:20px;
+        width:100%;
+    }
+
+    .contact-buttons{
+        flex-direction:column;
+    }
+
+    .contact-buttons .btn{
+        width:100%;
     }
 
     .footer{
         display:block;
+        text-align:center;
     }
 
     .footer p:last-child{
         margin-top:5px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media(max-width:380px){
+
+    .doctor-name{
+        font-size:34px;
+        letter-spacing:-2px;
     }
 
 }
@@ -880,9 +1009,9 @@ footer{
 <body>
 
 
-<!-- =========================
+<!-- =======================================================
      NAVIGATION
-========================= -->
+======================================================= -->
 
 <nav id="navbar">
 
@@ -912,9 +1041,9 @@ Let's Connect
 </nav>
 
 
-<!-- =========================
+<!-- =======================================================
      HERO
-========================= -->
+======================================================= -->
 
 <section class="hero" id="home">
 
@@ -927,9 +1056,8 @@ Let's Connect
 Physician • Surgeon • Researcher
 </div>
 
-<h1>
-Dr. B.<br>
-<span>Sugan</span>
+<h1 class="doctor-name">
+Dr. B. <span>Sugan</span>
 </h1>
 
 <p class="hero-sub">
@@ -966,12 +1094,19 @@ Research & Presentations
 </div>
 
 
-<!-- PROFESSIONAL PHOTO -->
+<!-- =====================================================
+     YOUR PHOTO
+     
+     Keep your photograph here:
+     images/profile.jpg
+===================================================== -->
 
 <div class="photo-card reveal">
 
-<img src="images/profile.jpg"
-alt="Dr. B. Sugan - General Surgery">
+<img
+src="images/profile.jpg"
+alt="Dr. B. Sugan — MS General Surgery"
+>
 
 <div class="photo-caption">
 
@@ -980,7 +1115,7 @@ Current Professional Profile
 </small>
 
 <strong>
-MS General Surgery • Consultant Physician
+MS General Surgery • Consultant
 </strong>
 
 </div>
@@ -993,9 +1128,9 @@ MS General Surgery • Consultant Physician
 </section>
 
 
-<!-- =========================
-     STATS
-========================= -->
+<!-- =======================================================
+     STATISTICS
+======================================================= -->
 
 <div class="stats">
 
@@ -1018,7 +1153,7 @@ MS General Surgery • Consultant Physician
 
 <div class="stat">
 <strong>2026</strong>
-<span>ASI PROFESSIONAL ASSOCIATION</span>
+<span>ASI MEMBERSHIP</span>
 </div>
 
 </div>
@@ -1026,9 +1161,9 @@ MS General Surgery • Consultant Physician
 </div>
 
 
-<!-- =========================
+<!-- =======================================================
      ABOUT
-========================= -->
+======================================================= -->
 
 <section id="about">
 
@@ -1047,8 +1182,8 @@ learning, precision and better patient care.
 
 <p>
 My professional journey combines postgraduate surgical
-training, independent clinical practice, academic learning
-and scientific presentation.
+training, clinical practice, academic learning and
+scientific presentation.
 </p>
 
 </div>
@@ -1063,7 +1198,7 @@ Clinical Practice
 </h3>
 
 <p>
-Experience spanning postgraduate general surgery,
+Experience spanning postgraduate General Surgery,
 physician consultation, medical officer responsibilities
 and outpatient clinical practice.
 </p>
@@ -1091,9 +1226,9 @@ Evidence-Based Surgical Practice
 </section>
 
 
-<!-- =========================
-     EXPERIENCE
-========================= -->
+<!-- =======================================================
+     PROFESSIONAL EXPERIENCE
+======================================================= -->
 
 <section id="experience">
 
@@ -1120,6 +1255,8 @@ clinical responsibilities.
 <div class="timeline">
 
 
+<!-- MS FIRST -->
+
 <div class="timeline-item reveal">
 
 <div class="timeline-date">
@@ -1143,6 +1280,8 @@ management, operative practice and surgical specialties.
 </div>
 
 
+<!-- APOLLO -->
+
 <div class="timeline-item reveal">
 
 <div class="timeline-date">
@@ -1164,6 +1303,8 @@ treatment planning and outpatient follow-up.
 
 </div>
 
+
+<!-- ANNAI -->
 
 <div class="timeline-item reveal">
 
@@ -1187,6 +1328,8 @@ across routine and acute clinical presentations.
 </div>
 
 
+<!-- MEDICAL OFFICER -->
+
 <div class="timeline-item reveal">
 
 <div class="timeline-date">
@@ -1198,7 +1341,7 @@ Medical Officer
 </h3>
 
 <div class="timeline-place">
-Clinical Medical Practice
+Medical Practice
 </div>
 
 <p>
@@ -1208,6 +1351,8 @@ documentation and coordination of patient care.
 
 </div>
 
+
+<!-- INTERNSHIP -->
 
 <div class="timeline-item reveal">
 
@@ -1224,8 +1369,8 @@ MBBS Internship
 </div>
 
 <p>
-Structured clinical internship forming the final practical
-component of undergraduate medical education.
+Completed as the final clinical training component
+of undergraduate medical education.
 </p>
 
 </div>
@@ -1238,9 +1383,9 @@ component of undergraduate medical education.
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      EDUCATION
-========================= -->
+======================================================= -->
 
 <section id="education">
 
@@ -1272,7 +1417,7 @@ MS General Surgery
 </h3>
 
 <p>
-Postgraduate training in General Surgery
+Postgraduate training in General Surgery.
 </p>
 
 </div>
@@ -1293,7 +1438,7 @@ MBBS
 </h3>
 
 <p>
-Bachelor of Medicine and Bachelor of Surgery
+Bachelor of Medicine and Bachelor of Surgery.
 </p>
 
 </div>
@@ -1314,7 +1459,7 @@ Compulsory Rotatory Residential Internship
 </h3>
 
 <p>
-Completed as an integral component of MBBS clinical training.
+Integral clinical component of MBBS training.
 </p>
 
 </div>
@@ -1326,9 +1471,9 @@ Completed as an integral component of MBBS clinical training.
 </section>
 
 
-<!-- =========================
-     RESEARCH INTERESTS
-========================= -->
+<!-- =======================================================
+     CLINICAL INTERESTS
+======================================================= -->
 
 <section>
 
@@ -1396,9 +1541,9 @@ Areas of interest
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      PROFESSIONAL DEVELOPMENT
-========================= -->
+======================================================= -->
 
 <section id="courses">
 
@@ -1411,12 +1556,13 @@ Professional Development
 </div>
 
 <h2>
-Selected courses & certifications
+Courses & certifications
 </h2>
 
 <p>
-Continuing medical education through professional
-organizations and internationally recognized institutions.
+Selected continuing medical education and professional
+courses from recognized medical institutions and
+organizations.
 </p>
 
 </div>
@@ -1446,6 +1592,8 @@ Global Health
 <div class="course-grid">
 
 
+<!-- FIFA -->
+
 <div class="course reveal" data-category="professional">
 
 <div class="course-type">
@@ -1462,6 +1610,8 @@ December 2025
 
 </div>
 
+
+<!-- PGIMER -->
 
 <div class="course reveal" data-category="clinical">
 
@@ -1481,6 +1631,8 @@ Chandigarh • January 2024
 </div>
 
 
+<!-- IDF -->
+
 <div class="course reveal" data-category="clinical">
 
 <div class="course-type">
@@ -1498,6 +1650,8 @@ International Diabetes Federation, Belgium • July 2024
 </div>
 
 
+<!-- ACP -->
+
 <div class="course reveal" data-category="clinical">
 
 <div class="course-type">
@@ -1510,11 +1664,13 @@ Heart Failure in Hospitalized Patients
 </h3>
 
 <p>
-American College of Physicians
+American College of Physicians • May 2024
 </p>
 
 </div>
 
+
+<!-- API -->
 
 <div class="course reveal" data-category="clinical">
 
@@ -1527,11 +1683,13 @@ Advanced E-Hypertension Academy
 </h3>
 
 <p>
-Association of Physicians of India
+Association of Physicians of India • January 2024
 </p>
 
 </div>
 
+
+<!-- CSI -->
 
 <div class="course reveal" data-category="clinical">
 
@@ -1544,11 +1702,13 @@ ECG — Heart's Electrical Activity
 </h3>
 
 <p>
-Cardiological Society of India
+Cardiological Society of India • January 2024
 </p>
 
 </div>
 
+
+<!-- STANFORD -->
 
 <div class="course reveal" data-category="clinical">
 
@@ -1652,6 +1812,8 @@ Stanford University — School of Medicine
 </div>
 
 
+<!-- HARVARD -->
+
 <div class="course reveal" data-category="global">
 
 <div class="course-type">
@@ -1663,11 +1825,13 @@ Introduction to Nipah Virus
 </h3>
 
 <p>
-Harvard Medical School
+Harvard Medical School • May 2021
 </p>
 
 </div>
 
+
+<!-- WHO -->
 
 <div class="course reveal" data-category="clinical">
 
@@ -1720,22 +1884,7 @@ World Health Organization, Geneva
 </div>
 
 
-<div class="course reveal" data-category="clinical">
-
-<div class="course-type">
-Emergency Medicine
-</div>
-
-<h3>
-Medical Emergencies — Airway, Breathing, Circulation
-</h3>
-
-<p>
-Emergency medical education
-</p>
-
-</div>
-
+<!-- PENN -->
 
 <div class="course reveal" data-category="clinical">
 
@@ -1748,11 +1897,13 @@ Vital Signs — Understanding What the Body Is Telling Us
 </h3>
 
 <p>
-Clinical skills course
+University of Pennsylvania
 </p>
 
 </div>
 
+
+<!-- EMT -->
 
 <div class="course reveal" data-category="professional">
 
@@ -1782,7 +1933,24 @@ Diabetes — The Essential Facts
 </h3>
 
 <p>
-Clinical education course
+Clinical education
+</p>
+
+</div>
+
+
+<div class="course reveal" data-category="clinical">
+
+<div class="course-type">
+Emergency Medicine
+</div>
+
+<h3>
+Medical Emergencies — Airway, Breathing, Circulation
+</h3>
+
+<p>
+Emergency medical education
 </p>
 
 </div>
@@ -1795,9 +1963,9 @@ Clinical education course
 </section>
 
 
-<!-- =========================
-     RESEARCH & PRESENTATIONS
-========================= -->
+<!-- =======================================================
+     RESEARCH
+======================================================= -->
 
 <section id="research">
 
@@ -1824,6 +1992,8 @@ presentations at TNASICON 2026.
 <div class="research-grid">
 
 
+<!-- POSTER 1 -->
+
 <div class="research-card reveal">
 
 <div class="research-type">
@@ -1842,6 +2012,8 @@ TNASICON 2026
 </div>
 
 
+<!-- POSTER 2 -->
+
 <div class="research-card reveal">
 
 <div class="research-type">
@@ -1850,7 +2022,8 @@ Poster Presentation
 
 <h3>
 Comparison of Diathermy Versus Steel Scalpel Skin
-Incisions in Abdominal Surgeries: A Prospective Study
+Incisions in Abdominal Surgeries:
+A Prospective Study
 </h3>
 
 <div class="conference">
@@ -1859,6 +2032,8 @@ TNASICON 2026
 
 </div>
 
+
+<!-- PAPER -->
 
 <div class="research-card reveal">
 
@@ -1869,7 +2044,8 @@ Paper Presentation
 <h3>
 Comparing the Efficacy of Adhesive Skin Glue With
 Conventional Skin Suturing in Clean Surgical Procedures
-at a Tertiary Care Center: A Prospective Comparative Study
+at a Tertiary Care Center:
+A Prospective Comparative Study
 </h3>
 
 <div class="conference">
@@ -1878,6 +2054,8 @@ TNASICON 2026
 
 </div>
 
+
+<!-- MAGAZINE -->
 
 <div class="research-card reveal">
 
@@ -1904,9 +2082,9 @@ surgical education and evidence-based practice.
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      PROFESSIONAL MEMBERSHIPS
-========================= -->
+======================================================= -->
 
 <section>
 
@@ -1927,6 +2105,7 @@ Memberships & associations
 
 <div class="membership-grid">
 
+
 <div class="membership reveal">
 
 <h3>
@@ -1943,11 +2122,11 @@ Professional Association • 2026
 <div class="membership reveal">
 
 <h3>
-Academic Conferences
+TNASICON
 </h3>
 
 <p>
-Participation in scientific meetings and presentations.
+Scientific presentations • 2026
 </p>
 
 </div>
@@ -1965,6 +2144,7 @@ Ongoing professional and academic development.
 
 </div>
 
+
 </div>
 
 </div>
@@ -1972,9 +2152,9 @@ Ongoing professional and academic development.
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      CV
-========================= -->
+======================================================= -->
 
 <section>
 
@@ -1999,8 +2179,6 @@ Presentations • Professional Development
 
 </div>
 
-<!-- Replace cv.pdf with your actual CV filename -->
-
 <a href="cv.pdf"
 class="btn btn-primary"
 download>
@@ -2016,9 +2194,9 @@ Download CV
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      CONTACT
-========================= -->
+======================================================= -->
 
 <section id="contact" class="contact">
 
@@ -2051,7 +2229,10 @@ Chennai, India
 
 <div class="contact-buttons">
 
-<!-- Replace the email below with your actual email -->
+<!--
+REPLACE YOUR-EMAIL@example.com
+WITH YOUR ACTUAL PROFESSIONAL EMAIL
+-->
 
 <a href="mailto:YOUR-EMAIL@example.com"
 class="btn btn-primary">
@@ -2060,7 +2241,11 @@ Email Me
 
 </a>
 
-<!-- Replace # with your LinkedIn URL -->
+
+<!--
+REPLACE # WITH YOUR LINKEDIN URL
+IF YOU HAVE ONE
+-->
 
 <a href="#"
 class="btn btn-outline">
@@ -2078,9 +2263,9 @@ LinkedIn
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      FOOTER
-========================= -->
+======================================================= -->
 
 <footer>
 
@@ -2099,15 +2284,19 @@ General Surgery • Clinical Practice • Academic Portfolio
 </footer>
 
 
+<!-- =======================================================
+     JAVASCRIPT
+======================================================= -->
+
 <script>
 
-/* =========================
-   NAVBAR
-========================= */
+/* =========================================================
+   NAVBAR SCROLL EFFECT
+========================================================= */
 
 const navbar = document.getElementById("navbar");
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", function(){
 
     if(window.scrollY > 30){
 
@@ -2122,45 +2311,45 @@ window.addEventListener("scroll",()=>{
 });
 
 
-/* =========================
-   SCROLL ANIMATION
-========================= */
+/* =========================================================
+   REVEAL ANIMATIONS
+========================================================= */
 
-const observer =
-new IntersectionObserver(
+const observer = new IntersectionObserver(
 
-(entries)=>{
+    function(entries){
 
-    entries.forEach(entry=>{
+        entries.forEach(function(entry){
 
-        if(entry.isIntersecting){
+            if(entry.isIntersecting){
 
-            entry.target.classList.add("visible");
+                entry.target.classList.add("visible");
 
-        }
+            }
 
-    });
+        });
 
-},
+    },
 
-{
-    threshold:.08
-}
+    {
+        threshold:.08
+    }
 
 );
 
+
 document
 .querySelectorAll(".reveal")
-.forEach(element=>{
+.forEach(function(element){
 
     observer.observe(element);
 
 });
 
 
-/* =========================
+/* =========================================================
    COURSE FILTER
-========================= */
+========================================================= */
 
 const filters =
 document.querySelectorAll(".filter");
@@ -2168,12 +2357,15 @@ document.querySelectorAll(".filter");
 const courses =
 document.querySelectorAll(".course");
 
-filters.forEach(filter=>{
 
-    filter.addEventListener("click",()=>{
+filters.forEach(function(filter){
 
-        filters.forEach(button=>{
+    filter.addEventListener("click",function(){
+
+        filters.forEach(function(button){
+
             button.classList.remove("active");
+
         });
 
         filter.classList.add("active");
@@ -2181,7 +2373,8 @@ filters.forEach(filter=>{
         const category =
         filter.dataset.filter;
 
-        courses.forEach(course=>{
+
+        courses.forEach(function(course){
 
             if(
                 category === "all" ||
@@ -2203,9 +2396,9 @@ filters.forEach(filter=>{
 });
 
 
-/* =========================
+/* =========================================================
    ACTIVE NAVIGATION
-========================= */
+========================================================= */
 
 const sections =
 document.querySelectorAll("section[id]");
@@ -2213,16 +2406,17 @@ document.querySelectorAll("section[id]");
 const navLinks =
 document.querySelectorAll(".nav-links a");
 
-window.addEventListener("scroll",()=>{
+
+window.addEventListener("scroll",function(){
 
     let current="";
 
-    sections.forEach(section=>{
+    sections.forEach(function(section){
 
-        const top =
+        const sectionTop =
         section.offsetTop - 180;
 
-        if(window.scrollY >= top){
+        if(window.scrollY >= sectionTop){
 
             current =
             section.getAttribute("id");
@@ -2231,7 +2425,8 @@ window.addEventListener("scroll",()=>{
 
     });
 
-    navLinks.forEach(link=>{
+
+    navLinks.forEach(function(link){
 
         link.style.color="";
 
@@ -2249,7 +2444,41 @@ window.addEventListener("scroll",()=>{
 
 });
 
+
+/* =========================================================
+   SMOOTH NAVIGATION ON MOBILE / DESKTOP
+========================================================= */
+
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
+
+    link.addEventListener("click",function(event){
+
+        const targetId =
+        this.getAttribute("href");
+
+        if(targetId === "#"){
+            return;
+        }
+
+        const target =
+        document.querySelector(targetId);
+
+        if(target){
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior:"smooth"
+            });
+
+        }
+
+    });
+
+});
+
 </script>
+
 
 </body>
 </html>
