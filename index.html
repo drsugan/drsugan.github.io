@@ -1,14 +1,14 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Dr. B. Sugan | General Surgery</title>
 
 <meta name="description"
-content="Dr. B. Sugan — General Surgery postgraduate, physician consultant, clinical practitioner and surgical researcher based in Chennai.">
+content="Dr. B. Sugan — General Surgery postgraduate, physician consultant and clinical researcher based in Chennai.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,16 +18,15 @@ content="Dr. B. Sugan — General Surgery postgraduate, physician consultant, cl
 <style>
 
 :root{
-    --bg:#07111f;
-    --bg2:#0b1728;
-    --card:rgba(255,255,255,.055);
-    --card2:rgba(255,255,255,.075);
-    --line:rgba(255,255,255,.10);
-    --text:#f4f7fb;
-    --muted:#9baabd;
-    --accent:#73d6d1;
-    --accent2:#9de8e4;
-    --gold:#d9bd78;
+    --navy:#071522;
+    --navy2:#0b1d2d;
+    --teal:#67d5cf;
+    --teal-light:#9ae8e3;
+    --gold:#d8bd7c;
+    --white:#f5f8fb;
+    --muted:#9cabb9;
+    --border:rgba(255,255,255,.10);
+    --card:rgba(255,255,255,.045);
     --max:1180px;
 }
 
@@ -44,17 +43,17 @@ html{
 body{
     font-family:"DM Sans",sans-serif;
     background:
-        radial-gradient(circle at 15% 10%,rgba(115,214,209,.10),transparent 28%),
-        radial-gradient(circle at 85% 15%,rgba(217,189,120,.08),transparent 25%),
-        var(--bg);
-    color:var(--text);
+        radial-gradient(circle at 15% 10%,rgba(103,213,207,.09),transparent 30%),
+        radial-gradient(circle at 90% 20%,rgba(216,189,124,.07),transparent 25%),
+        var(--navy);
+    color:var(--white);
     line-height:1.7;
     overflow-x:hidden;
 }
 
 a{
-    color:inherit;
     text-decoration:none;
+    color:inherit;
 }
 
 .container{
@@ -64,13 +63,13 @@ a{
 
 section{
     padding:110px 0;
-    position:relative;
 }
 
 ::selection{
-    background:var(--accent);
-    color:#061019;
+    background:var(--teal);
+    color:#061018;
 }
+
 
 /* =========================
    NAVIGATION
@@ -80,43 +79,42 @@ nav{
     position:fixed;
     top:0;
     left:0;
-    right:0;
+    width:100%;
     z-index:1000;
     padding:18px 0;
-    background:rgba(7,17,31,.72);
+    background:rgba(7,21,34,.72);
     backdrop-filter:blur(18px);
     border-bottom:1px solid transparent;
     transition:.3s;
 }
 
 nav.scrolled{
-    border-bottom-color:var(--line);
-    background:rgba(7,17,31,.92);
+    background:rgba(7,21,34,.95);
+    border-bottom-color:var(--border);
 }
 
 .nav-inner{
     width:min(var(--max),calc(100% - 40px));
     margin:auto;
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
 }
 
 .logo{
-    font-family:"Manrope",sans-serif;
-    font-weight:800;
+    font-family:"Manrope";
     font-size:20px;
-    letter-spacing:-.5px;
+    font-weight:800;
 }
 
 .logo span{
-    color:var(--accent);
+    color:var(--teal);
 }
 
 .nav-links{
-    display:flex;
-    gap:28px;
     list-style:none;
+    display:flex;
+    gap:27px;
 }
 
 .nav-links a{
@@ -126,21 +124,21 @@ nav.scrolled{
 }
 
 .nav-links a:hover{
-    color:var(--accent);
+    color:var(--teal);
 }
 
-.nav-button{
-    border:1px solid var(--line);
-    padding:9px 16px;
+.nav-contact{
+    padding:9px 17px;
+    border:1px solid var(--border);
     border-radius:100px;
-    font-size:13px;
-    transition:.25s;
+    font-size:12px;
 }
 
-.nav-button:hover{
-    border-color:var(--accent);
-    color:var(--accent);
+.nav-contact:hover{
+    color:var(--teal);
+    border-color:var(--teal);
 }
+
 
 /* =========================
    HERO
@@ -148,28 +146,27 @@ nav.scrolled{
 
 .hero{
     min-height:100vh;
+    padding-top:140px;
     display:flex;
     align-items:center;
-    padding-top:130px;
-    overflow:hidden;
 }
 
 .hero-grid{
     display:grid;
-    grid-template-columns:1.3fr .7fr;
+    grid-template-columns:1.25fr .75fr;
     gap:80px;
     align-items:center;
 }
 
 .eyebrow{
-    display:inline-flex;
+    display:flex;
     align-items:center;
     gap:10px;
-    color:var(--accent);
-    font-size:12px;
+    color:var(--teal);
+    font-size:11px;
     font-weight:700;
-    letter-spacing:2px;
     text-transform:uppercase;
+    letter-spacing:2px;
     margin-bottom:24px;
 }
 
@@ -177,160 +174,201 @@ nav.scrolled{
     content:"";
     width:35px;
     height:1px;
-    background:var(--accent);
+    background:var(--teal);
 }
 
 .hero h1{
-    font-family:"Manrope",sans-serif;
-    font-size:clamp(52px,7vw,92px);
+    font-family:"Manrope";
+    font-size:clamp(55px,7vw,92px);
     line-height:.98;
     letter-spacing:-5px;
-    max-width:850px;
 }
 
 .hero h1 span{
-    color:var(--accent);
+    color:var(--teal);
 }
 
 .hero-sub{
-    margin-top:30px;
     max-width:700px;
-    font-size:18px;
+    margin-top:30px;
     color:var(--muted);
+    font-size:18px;
 }
 
-.hero-meta{
+.hero-tags{
     display:flex;
-    gap:15px;
     flex-wrap:wrap;
-    margin-top:35px;
+    gap:10px;
+    margin-top:30px;
 }
 
-.pill{
-    border:1px solid var(--line);
-    background:rgba(255,255,255,.035);
-    padding:10px 15px;
+.tag{
+    padding:9px 14px;
+    border:1px solid var(--border);
     border-radius:100px;
-    color:#c9d4e2;
-    font-size:13px;
+    background:rgba(255,255,255,.03);
+    color:#ccd7e2;
+    font-size:12px;
 }
 
-.hero-actions{
+.hero-buttons{
     display:flex;
-    gap:14px;
-    margin-top:40px;
+    gap:12px;
+    margin-top:35px;
     flex-wrap:wrap;
 }
 
 .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
     padding:13px 21px;
     border-radius:9px;
     font-size:13px;
     font-weight:700;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
     transition:.25s;
 }
 
 .btn-primary{
-    background:var(--accent);
+    background:var(--teal);
     color:#061019;
 }
 
 .btn-primary:hover{
+    background:var(--teal-light);
     transform:translateY(-2px);
-    background:var(--accent2);
 }
 
 .btn-outline{
-    border:1px solid var(--line);
-    color:#dce5ee;
+    border:1px solid var(--border);
+    color:#d9e2ea;
 }
 
 .btn-outline:hover{
-    border-color:var(--accent);
-    color:var(--accent);
+    border-color:var(--teal);
+    color:var(--teal);
 }
 
-/* HERO CARD */
-
-.hero-card{
-    position:relative;
-    border:1px solid var(--line);
-    background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));
-    border-radius:28px;
-    padding:34px;
-    box-shadow:0 30px 80px rgba(0,0,0,.25);
-}
-
-.monogram{
-    width:100px;
-    height:100px;
-    border-radius:24px;
-    display:grid;
-    place-items:center;
-    background:linear-gradient(145deg,#9de8e4,#4aa9a5);
-    color:#061019;
-    font-family:"Manrope";
-    font-size:30px;
-    font-weight:800;
-    margin-bottom:30px;
-}
-
-.hero-card h3{
-    font-family:"Manrope";
-    font-size:23px;
-}
-
-.hero-card p{
-    color:var(--muted);
-    font-size:14px;
-    margin-top:8px;
-}
-
-.hero-card-line{
-    height:1px;
-    background:var(--line);
-    margin:25px 0;
-}
-
-.hero-card small{
-    color:var(--accent);
-    font-size:11px;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-}
 
 /* =========================
-   SECTION HEADERS
+   PHOTO
+========================= */
+
+.photo-card{
+    position:relative;
+    padding:14px;
+    border:1px solid var(--border);
+    border-radius:28px;
+    background:rgba(255,255,255,.035);
+    box-shadow:0 35px 100px rgba(0,0,0,.30);
+}
+
+.photo-card img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    object-position:center top;
+    display:block;
+    border-radius:20px;
+}
+
+.photo-caption{
+    position:absolute;
+    left:28px;
+    right:28px;
+    bottom:28px;
+    padding:17px 20px;
+    background:rgba(7,21,34,.82);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:14px;
+}
+
+.photo-caption small{
+    color:var(--teal);
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    font-size:9px;
+}
+
+.photo-caption strong{
+    display:block;
+    font-family:"Manrope";
+    margin-top:3px;
+    font-size:15px;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+    padding:0 0 80px;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+}
+
+.stat{
+    padding:28px 20px;
+    text-align:center;
+    border-right:1px solid var(--border);
+}
+
+.stat:last-child{
+    border-right:none;
+}
+
+.stat strong{
+    display:block;
+    font-family:"Manrope";
+    font-size:27px;
+    color:var(--teal);
+}
+
+.stat span{
+    display:block;
+    color:var(--muted);
+    font-size:11px;
+    margin-top:3px;
+}
+
+
+/* =========================
+   SECTION HEAD
 ========================= */
 
 .section-head{
-    max-width:750px;
+    max-width:760px;
     margin-bottom:55px;
 }
 
-.section-kicker{
-    color:var(--accent);
-    font-size:11px;
-    letter-spacing:2px;
+.kicker{
+    color:var(--teal);
     text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:10px;
     font-weight:700;
     margin-bottom:13px;
 }
 
 .section-head h2{
     font-family:"Manrope";
-    font-size:clamp(34px,5vw,56px);
+    font-size:clamp(35px,5vw,56px);
     line-height:1.08;
     letter-spacing:-2.5px;
 }
 
 .section-head p{
     color:var(--muted);
-    margin-top:17px;
+    margin-top:16px;
 }
+
 
 /* =========================
    ABOUT
@@ -339,26 +377,27 @@ nav.scrolled{
 .about-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:25px;
+    gap:18px;
 }
 
 .about-card{
-    border:1px solid var(--line);
+    border:1px solid var(--border);
     background:var(--card);
-    border-radius:18px;
-    padding:30px;
+    border-radius:20px;
+    padding:32px;
 }
 
 .about-card h3{
     font-family:"Manrope";
     font-size:20px;
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 
 .about-card p{
     color:var(--muted);
-    font-size:15px;
+    font-size:14px;
 }
+
 
 /* =========================
    EXPERIENCE
@@ -366,23 +405,23 @@ nav.scrolled{
 
 .timeline{
     position:relative;
-    margin-left:12px;
+    margin-left:10px;
 }
 
 .timeline:before{
     content:"";
     position:absolute;
-    left:5px;
     top:0;
     bottom:0;
+    left:5px;
     width:1px;
-    background:linear-gradient(var(--accent),transparent);
+    background:linear-gradient(var(--teal),rgba(103,213,207,0));
 }
 
 .timeline-item{
     position:relative;
     padding-left:45px;
-    margin-bottom:50px;
+    margin-bottom:55px;
 }
 
 .timeline-item:before{
@@ -392,165 +431,169 @@ nav.scrolled{
     top:8px;
     width:11px;
     height:11px;
+    background:var(--teal);
     border-radius:50%;
-    background:var(--accent);
-    box-shadow:0 0 0 6px rgba(115,214,209,.09);
+    box-shadow:0 0 0 6px rgba(103,213,207,.08);
 }
 
 .timeline-date{
-    color:var(--accent);
-    font-size:11px;
+    color:var(--teal);
+    font-size:10px;
+    font-weight:700;
     letter-spacing:1.5px;
     text-transform:uppercase;
-    font-weight:700;
 }
 
 .timeline-item h3{
     font-family:"Manrope";
-    font-size:23px;
-    margin-top:6px;
+    font-size:22px;
+    margin-top:5px;
 }
 
 .timeline-place{
-    color:#d2dce7;
+    color:#d4dfe9;
     font-size:14px;
-    margin-top:3px;
 }
 
 .timeline-item p{
-    color:var(--muted);
-    margin-top:10px;
     max-width:800px;
+    color:var(--muted);
+    font-size:14px;
+    margin-top:8px;
 }
+
 
 /* =========================
    EDUCATION
 ========================= */
 
-.education-card{
-    border:1px solid var(--line);
-    background:var(--card);
-    border-radius:20px;
-    padding:30px;
+.edu-card{
     display:grid;
-    grid-template-columns:180px 1fr;
+    grid-template-columns:190px 1fr;
     gap:25px;
-    margin-bottom:16px;
+    border:1px solid var(--border);
+    background:var(--card);
+    padding:30px;
+    border-radius:18px;
+    margin-bottom:14px;
 }
 
-.education-year{
-    color:var(--accent);
-    font-size:12px;
+.edu-label{
+    color:var(--teal);
+    font-size:10px;
     font-weight:700;
     letter-spacing:1.5px;
 }
 
-.education-card h3{
+.edu-card h3{
     font-family:"Manrope";
-    font-size:21px;
+    font-size:20px;
 }
 
-.education-card p{
+.edu-card p{
     color:var(--muted);
-    margin-top:5px;
+    font-size:14px;
 }
+
 
 /* =========================
-   SKILLS
+   INTERESTS
 ========================= */
 
-.skill-grid{
+.interest-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:14px;
 }
 
-.skill{
-    border:1px solid var(--line);
+.interest{
+    padding:22px;
+    border:1px solid var(--border);
     background:var(--card);
-    padding:20px;
-    border-radius:15px;
+    border-radius:16px;
 }
 
-.skill strong{
-    display:block;
+.interest strong{
     font-family:"Manrope";
-    margin-bottom:5px;
+    font-size:14px;
 }
 
-.skill span{
+.interest p{
     color:var(--muted);
-    font-size:13px;
+    font-size:12px;
+    margin-top:4px;
 }
+
 
 /* =========================
    COURSES
 ========================= */
 
-.course-controls{
+.filters{
     display:flex;
-    gap:9px;
     flex-wrap:wrap;
+    gap:8px;
     margin-bottom:25px;
 }
 
 .filter{
-    cursor:pointer;
+    padding:8px 15px;
+    border-radius:100px;
+    border:1px solid var(--border);
     background:transparent;
     color:var(--muted);
-    border:1px solid var(--line);
-    border-radius:100px;
-    padding:8px 15px;
-    font:inherit;
-    font-size:12px;
+    cursor:pointer;
+    font-family:"DM Sans";
+    font-size:11px;
 }
 
 .filter.active,
 .filter:hover{
     color:#061019;
-    background:var(--accent);
-    border-color:var(--accent);
+    background:var(--teal);
+    border-color:var(--teal);
 }
 
 .course-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:15px;
+    gap:14px;
 }
 
 .course{
-    border:1px solid var(--line);
-    background:var(--card);
     padding:23px;
+    border:1px solid var(--border);
+    background:var(--card);
     border-radius:17px;
     transition:.25s;
 }
 
 .course:hover{
     transform:translateY(-4px);
-    border-color:rgba(115,214,209,.35);
+    border-color:rgba(103,213,207,.35);
 }
 
 .course-type{
-    font-size:10px;
-    color:var(--accent);
-    letter-spacing:1.5px;
+    color:var(--teal);
+    font-size:9px;
     text-transform:uppercase;
+    letter-spacing:1.5px;
     font-weight:700;
 }
 
 .course h3{
     font-family:"Manrope";
-    font-size:16px;
-    margin-top:9px;
+    font-size:15px;
     line-height:1.4;
+    margin-top:8px;
 }
 
 .course p{
     color:var(--muted);
-    font-size:12px;
-    margin-top:8px;
+    font-size:11px;
+    margin-top:7px;
 }
+
 
 /* =========================
    RESEARCH
@@ -559,99 +602,106 @@ nav.scrolled{
 .research-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:18px;
+    gap:16px;
 }
 
 .research-card{
-    border:1px solid var(--line);
+    border:1px solid var(--border);
     background:var(--card);
     padding:30px;
     border-radius:20px;
+    transition:.25s;
 }
 
-.research-label{
-    color:var(--accent);
-    font-size:10px;
-    letter-spacing:1.5px;
+.research-card:hover{
+    border-color:rgba(103,213,207,.3);
+}
+
+.research-type{
+    color:var(--teal);
+    font-size:9px;
     text-transform:uppercase;
+    letter-spacing:1.5px;
     font-weight:700;
 }
 
 .research-card h3{
     font-family:"Manrope";
-    font-size:20px;
-    line-height:1.35;
-    margin-top:12px;
+    font-size:19px;
+    line-height:1.4;
+    margin-top:10px;
 }
 
 .research-card p{
     color:var(--muted);
-    font-size:14px;
-    margin-top:10px;
+    font-size:13px;
+    margin-top:9px;
 }
 
 .conference{
-    margin-top:20px;
     color:var(--gold);
-    font-size:12px;
+    font-size:11px;
     font-weight:700;
+    margin-top:16px;
 }
 
+
 /* =========================
-   ASSOCIATIONS
+   MEMBERSHIPS
 ========================= */
 
-.association-grid{
+.membership-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:15px;
 }
 
-.association{
-    border:1px solid var(--line);
+.membership{
+    border:1px solid var(--border);
     background:var(--card);
-    border-radius:17px;
     padding:25px;
+    border-radius:17px;
 }
 
-.association h3{
+.membership h3{
     font-family:"Manrope";
-    font-size:16px;
+    font-size:15px;
 }
 
-.association p{
+.membership p{
     color:var(--muted);
-    font-size:13px;
-    margin-top:6px;
+    font-size:12px;
+    margin-top:5px;
 }
+
 
 /* =========================
    CV
 ========================= */
 
-.cv-box{
-    border:1px solid rgba(115,214,209,.22);
+.cv{
+    border:1px solid rgba(103,213,207,.2);
     background:
-        radial-gradient(circle at 90% 20%,rgba(115,214,209,.12),transparent 30%),
+        radial-gradient(circle at 85% 20%,rgba(103,213,207,.12),transparent 30%),
         var(--card);
-    border-radius:26px;
-    padding:55px;
+    border-radius:25px;
+    padding:50px;
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
     gap:30px;
 }
 
-.cv-box h2{
+.cv h2{
     font-family:"Manrope";
-    font-size:32px;
-    letter-spacing:-1px;
+    font-size:31px;
 }
 
-.cv-box p{
+.cv p{
     color:var(--muted);
-    margin-top:7px;
+    margin-top:5px;
 }
+
 
 /* =========================
    CONTACT
@@ -667,44 +717,49 @@ nav.scrolled{
 }
 
 .contact-card{
-    border:1px solid var(--line);
+    border:1px solid var(--border);
     background:var(--card);
-    border-radius:24px;
+    border-radius:23px;
     padding:45px;
 }
 
-.contact-links{
+.contact-card p{
+    color:var(--muted);
+}
+
+.contact-buttons{
     display:flex;
     justify-content:center;
     gap:12px;
-    flex-wrap:wrap;
     margin-top:25px;
 }
+
 
 /* =========================
    FOOTER
 ========================= */
 
 footer{
-    border-top:1px solid var(--line);
-    padding:30px 0;
+    border-top:1px solid var(--border);
+    padding:28px 0;
 }
 
-.footer-inner{
+.footer{
     display:flex;
     justify-content:space-between;
     color:var(--muted);
-    font-size:12px;
+    font-size:11px;
 }
 
+
 /* =========================
-   REVEAL
+   ANIMATION
 ========================= */
 
 .reveal{
     opacity:0;
     transform:translateY(25px);
-    transition:opacity .7s ease,transform .7s ease;
+    transition:.7s ease;
 }
 
 .reveal.visible{
@@ -712,43 +767,45 @@ footer{
     transform:none;
 }
 
+
 /* =========================
    MOBILE
 ========================= */
 
-@media(max-width:900px){
+@media(max-width:950px){
 
     .nav-links{
         display:none;
     }
 
-    .hero-grid,
-    .about-grid,
-    .research-grid{
+    .hero-grid{
         grid-template-columns:1fr;
     }
 
-    .hero{
-        padding-top:120px;
+    .photo-card{
+        max-width:500px;
+        margin:auto;
     }
 
-    .hero h1{
-        letter-spacing:-3px;
-    }
-
-    .skill-grid{
-        grid-template-columns:1fr 1fr;
+    .about-grid,
+    .research-grid{
+        grid-template-columns:1fr;
     }
 
     .course-grid{
         grid-template-columns:1fr 1fr;
     }
 
-    .association-grid{
+    .interest-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .membership-grid{
         grid-template-columns:1fr 1fr;
     }
 
 }
+
 
 @media(max-width:600px){
 
@@ -758,50 +815,70 @@ footer{
 
     .container,
     .nav-inner{
-        width:min(100% - 28px,var(--max));
+        width:calc(100% - 28px);
+    }
+
+    .hero{
+        padding-top:120px;
     }
 
     .hero h1{
-        font-size:50px;
+        font-size:52px;
+        letter-spacing:-3px;
     }
 
     .hero-sub{
         font-size:16px;
     }
 
-    .skill-grid,
+    .photo-card img{
+        height:430px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat{
+        border-bottom:1px solid var(--border);
+    }
+
     .course-grid,
-    .association-grid{
+    .interest-grid,
+    .membership-grid{
         grid-template-columns:1fr;
     }
 
-    .education-card{
+    .edu-card{
         grid-template-columns:1fr;
     }
 
-    .cv-box{
-        padding:30px;
+    .cv{
+        display:block;
+        padding:32px;
+    }
+
+    .cv .btn{
+        margin-top:20px;
+    }
+
+    .footer{
         display:block;
     }
 
-    .cv-box .btn{
-        margin-top:22px;
-    }
-
-    .footer-inner{
-        display:block;
-    }
-
-    .footer-inner p:last-child{
+    .footer p:last-child{
         margin-top:5px;
     }
 
 }
 
 </style>
+
 </head>
 
+
 <body>
+
 
 <!-- =========================
      NAVIGATION
@@ -816,15 +893,17 @@ Dr. B.<span>Sugan</span>
 </a>
 
 <ul class="nav-links">
+
 <li><a href="#about">About</a></li>
 <li><a href="#experience">Experience</a></li>
 <li><a href="#education">Education</a></li>
 <li><a href="#courses">Courses</a></li>
 <li><a href="#research">Research</a></li>
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
-<a href="#contact" class="nav-button">
+<a href="#contact" class="nav-contact">
 Let's Connect
 </a>
 
@@ -841,6 +920,7 @@ Let's Connect
 
 <div class="container hero-grid">
 
+
 <div class="reveal">
 
 <div class="eyebrow">
@@ -853,22 +933,25 @@ Dr. B.<br>
 </h1>
 
 <p class="hero-sub">
-General Surgery postgraduate with clinical experience in
-hospital medicine, surgical practice and outpatient care,
-with a growing focus on evidence-based surgery,
-clinical research and continuous medical education.
+
+MS General Surgery postgraduate and physician consultant
+with clinical experience across hospital medicine,
+surgical practice and outpatient care, with interests in
+clinical research, surgical education and evidence-based
+practice.
+
 </p>
 
-<div class="hero-meta">
+<div class="hero-tags">
 
-<div class="pill">General Surgery</div>
-<div class="pill">Clinical Practice</div>
-<div class="pill">Surgical Research</div>
-<div class="pill">Chennai, India</div>
+<div class="tag">MS General Surgery</div>
+<div class="tag">Clinical Practice</div>
+<div class="tag">Surgical Research</div>
+<div class="tag">Chennai, India</div>
 
 </div>
 
-<div class="hero-actions">
+<div class="hero-buttons">
 
 <a href="#experience" class="btn btn-primary">
 Explore My Journey
@@ -883,50 +966,64 @@ Research & Presentations
 </div>
 
 
-<div class="hero-card reveal">
+<!-- PROFESSIONAL PHOTO -->
 
-<div class="monogram">
-BS
-</div>
+<div class="photo-card reveal">
 
-<small>Current Professional Role</small>
+<img src="images/profile.jpg"
+alt="Dr. B. Sugan - General Surgery">
 
-<h3>
-MS General Surgery
-</h3>
+<div class="photo-caption">
 
-<p>
-Postgraduate surgical training with
-clinical exposure across general surgery
-and surgical specialties.
-</p>
+<small>
+Current Professional Profile
+</small>
 
-<div class="hero-card-line"></div>
-
-<small>Clinical Practice</small>
-
-<h3>
-Consultant
-</h3>
-
-<p>
-Apollo Clinic, Kundrathur, Chennai
-</p>
-
-<div class="hero-card-line"></div>
-
-<small>Academic Focus</small>
-
-<p>
-Clinical research • Surgical education •
-Evidence-based practice
-</p>
+<strong>
+MS General Surgery • Consultant Physician
+</strong>
 
 </div>
+
+</div>
+
 
 </div>
 
 </section>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<div class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+<strong>MS</strong>
+<span>GENERAL SURGERY</span>
+</div>
+
+<div class="stat">
+<strong>2026</strong>
+<span>TNASICON PRESENTATIONS</span>
+</div>
+
+<div class="stat">
+<strong>20+</strong>
+<span>PROFESSIONAL COURSES</span>
+</div>
+
+<div class="stat">
+<strong>2026</strong>
+<span>ASI PROFESSIONAL ASSOCIATION</span>
+</div>
+
+</div>
+
+</div>
 
 
 <!-- =========================
@@ -939,13 +1036,13 @@ Evidence-based practice
 
 <div class="section-head reveal">
 
-<div class="section-kicker">
+<div class="kicker">
 Profile
 </div>
 
 <h2>
-A clinician built around
-curiosity, precision and continuous learning.
+A clinician focused on
+learning, precision and better patient care.
 </h2>
 
 <p>
@@ -973,6 +1070,7 @@ and outpatient clinical practice.
 
 </div>
 
+
 <div class="about-card reveal">
 
 <h3>
@@ -994,7 +1092,7 @@ Evidence-Based Surgical Practice
 
 
 <!-- =========================
-     PROFESSIONAL EXPERIENCE
+     EXPERIENCE
 ========================= -->
 
 <section id="experience">
@@ -1003,7 +1101,7 @@ Evidence-Based Surgical Practice
 
 <div class="section-head reveal">
 
-<div class="section-kicker">
+<div class="kicker">
 Professional Journey
 </div>
 
@@ -1012,7 +1110,7 @@ Clinical experience
 </h2>
 
 <p>
-A timeline of postgraduate training and independent
+A timeline of postgraduate training and professional
 clinical responsibilities.
 </p>
 
@@ -1020,6 +1118,7 @@ clinical responsibilities.
 
 
 <div class="timeline">
+
 
 <div class="timeline-item reveal">
 
@@ -1059,8 +1158,8 @@ Apollo Clinic, Kundrathur, Chennai
 </div>
 
 <p>
-Clinical consultation and outpatient patient care,
-assessment, diagnosis, treatment planning and follow-up.
+Clinical consultation, patient assessment, diagnosis,
+treatment planning and outpatient follow-up.
 </p>
 
 </div>
@@ -1081,8 +1180,8 @@ Annai Multispeciality Hospital, Chennai
 </div>
 
 <p>
-Provided clinical consultation and medical management
-for patients across routine and acute clinical presentations.
+Clinical consultation and medical management of patients
+across routine and acute clinical presentations.
 </p>
 
 </div>
@@ -1091,7 +1190,7 @@ for patients across routine and acute clinical presentations.
 <div class="timeline-item reveal">
 
 <div class="timeline-date">
-Early Clinical Practice
+Clinical Practice
 </div>
 
 <h3>
@@ -1103,8 +1202,8 @@ Clinical Medical Practice
 </div>
 
 <p>
-Experience in patient assessment, medical management,
-clinical documentation and coordination of patient care.
+Patient assessment, medical management, clinical
+documentation and coordination of patient care.
 </p>
 
 </div>
@@ -1126,11 +1225,11 @@ MBBS Internship
 
 <p>
 Structured clinical internship forming the final practical
-component of undergraduate medical education, with exposure
-to major clinical specialties and frontline patient care.
+component of undergraduate medical education.
 </p>
 
 </div>
+
 
 </div>
 
@@ -1149,7 +1248,7 @@ to major clinical specialties and frontline patient care.
 
 <div class="section-head reveal">
 
-<div class="section-kicker">
+<div class="kicker">
 Academic Journey
 </div>
 
@@ -1157,17 +1256,12 @@ Academic Journey
 Education & training
 </h2>
 
-<p>
-Medical education followed by postgraduate specialization
-in General Surgery.
-</p>
-
 </div>
 
 
-<div class="education-card reveal">
+<div class="edu-card reveal">
 
-<div class="education-year">
+<div class="edu-label">
 POSTGRADUATE
 </div>
 
@@ -1186,9 +1280,9 @@ Postgraduate training in General Surgery
 </div>
 
 
-<div class="education-card reveal">
+<div class="edu-card reveal">
 
-<div class="education-year">
+<div class="edu-label">
 UNDERGRADUATE
 </div>
 
@@ -1207,9 +1301,9 @@ Bachelor of Medicine and Bachelor of Surgery
 </div>
 
 
-<div class="education-card reveal">
+<div class="edu-card reveal">
 
-<div class="education-year">
+<div class="edu-label">
 CLINICAL TRAINING
 </div>
 
@@ -1233,7 +1327,7 @@ Completed as an integral component of MBBS clinical training.
 
 
 <!-- =========================
-     CLINICAL SKILLS
+     RESEARCH INTERESTS
 ========================= -->
 
 <section>
@@ -1242,56 +1336,57 @@ Completed as an integral component of MBBS clinical training.
 
 <div class="section-head reveal">
 
-<div class="section-kicker">
-Clinical Focus
+<div class="kicker">
+Clinical & Academic Focus
 </div>
 
 <h2>
-Areas of professional interest
+Areas of interest
 </h2>
 
 </div>
 
-<div class="skill-grid">
 
-<div class="skill reveal">
+<div class="interest-grid">
+
+<div class="interest reveal">
 <strong>General Surgery</strong>
-<span>Clinical & perioperative care</span>
+<p>Clinical and perioperative care</p>
 </div>
 
-<div class="skill reveal">
-<strong>Emergency Care</strong>
-<span>Acute patient assessment</span>
+<div class="interest reveal">
+<strong>Emergency Surgery</strong>
+<p>Acute surgical assessment</p>
 </div>
 
-<div class="skill reveal">
-<strong>Patient Management</strong>
-<span>Diagnosis & treatment planning</span>
+<div class="interest reveal">
+<strong>Wound Care</strong>
+<p>Surgical wounds and healing</p>
 </div>
 
-<div class="skill reveal">
-<strong>Surgical Research</strong>
-<span>Clinical evidence & outcomes</span>
+<div class="interest reveal">
+<strong>Perioperative Care</strong>
+<p>Comprehensive surgical management</p>
 </div>
 
-<div class="skill reveal">
-<strong>Critical Care</strong>
-<span>Resuscitation & acute care</span>
+<div class="interest reveal">
+<strong>Surgical Critical Care</strong>
+<p>Resuscitation and acute care</p>
 </div>
 
-<div class="skill reveal">
-<strong>Clinical Education</strong>
-<span>Academic presentations</span>
+<div class="interest reveal">
+<strong>Clinical Research</strong>
+<p>Research and outcome assessment</p>
 </div>
 
-<div class="skill reveal">
+<div class="interest reveal">
+<strong>Surgical Education</strong>
+<p>Academic learning and presentations</p>
+</div>
+
+<div class="interest reveal">
 <strong>Evidence-Based Practice</strong>
-<span>Scientific literature</span>
-</div>
-
-<div class="skill reveal">
-<strong>Continuing Education</strong>
-<span>International medical courses</span>
+<p>Scientific and clinical literature</p>
 </div>
 
 </div>
@@ -1302,7 +1397,7 @@ Areas of professional interest
 
 
 <!-- =========================
-     PROFESSIONAL COURSES
+     PROFESSIONAL DEVELOPMENT
 ========================= -->
 
 <section id="courses">
@@ -1311,24 +1406,23 @@ Areas of professional interest
 
 <div class="section-head reveal">
 
-<div class="section-kicker">
+<div class="kicker">
 Professional Development
 </div>
 
 <h2>
-Courses & certifications
+Selected courses & certifications
 </h2>
 
 <p>
-Selected professional, clinical and academic courses
-completed through international medical institutions
-and professional organizations.
+Continuing medical education through professional
+organizations and internationally recognized institutions.
 </p>
 
 </div>
 
 
-<div class="course-controls">
+<div class="filters">
 
 <button class="filter active" data-filter="all">
 All
@@ -1355,7 +1449,7 @@ Global Health
 <div class="course reveal" data-category="professional">
 
 <div class="course-type">
-Professional Course
+Professional Qualification
 </div>
 
 <h3>
@@ -1372,7 +1466,7 @@ December 2025
 <div class="course reveal" data-category="clinical">
 
 <div class="course-type">
-Critical Care
+Trauma & Critical Care
 </div>
 
 <h3>
@@ -1390,7 +1484,7 @@ Chandigarh • January 2024
 <div class="course reveal" data-category="clinical">
 
 <div class="course-type">
-Cardiovascular Medicine
+Diabetes & Cardiology
 </div>
 
 <h3>
@@ -1407,7 +1501,7 @@ International Diabetes Federation, Belgium • July 2024
 <div class="course reveal" data-category="clinical">
 
 <div class="course-type">
-Cardiology
+Heart Failure
 </div>
 
 <h3>
@@ -1425,7 +1519,7 @@ American College of Physicians
 <div class="course reveal" data-category="clinical">
 
 <div class="course-type">
-Cardiology
+Hypertension
 </div>
 
 <h3>
@@ -1442,7 +1536,7 @@ Association of Physicians of India
 <div class="course reveal" data-category="clinical">
 
 <div class="course-type">
-ECG
+Cardiology
 </div>
 
 <h3>
@@ -1459,7 +1553,7 @@ Cardiological Society of India
 <div class="course reveal" data-category="clinical">
 
 <div class="course-type">
-Palliative Care
+Palliative Medicine
 </div>
 
 <h3>
@@ -1561,7 +1655,7 @@ Stanford University — School of Medicine
 <div class="course reveal" data-category="global">
 
 <div class="course-type">
-Infectious Diseases
+Infectious Disease
 </div>
 
 <h3>
@@ -1612,7 +1706,7 @@ World Health Organization, Geneva
 <div class="course reveal" data-category="global">
 
 <div class="course-type">
-Infection Control
+Infection Prevention
 </div>
 
 <h3>
@@ -1637,7 +1731,7 @@ Medical Emergencies — Airway, Breathing, Circulation
 </h3>
 
 <p>
-Clinical Emergency Medicine Training
+Emergency medical education
 </p>
 
 </div>
@@ -1654,7 +1748,7 @@ Vital Signs — Understanding What the Body Is Telling Us
 </h3>
 
 <p>
-Clinical Skills Course
+Clinical skills course
 </p>
 
 </div>
@@ -1702,7 +1796,7 @@ Clinical education course
 
 
 <!-- =========================
-     RESEARCH
+     RESEARCH & PRESENTATIONS
 ========================= -->
 
 <section id="research">
@@ -1711,17 +1805,17 @@ Clinical education course
 
 <div class="section-head reveal">
 
-<div class="section-kicker">
-Academia
+<div class="kicker">
+Research & Academia
 </div>
 
 <h2>
-Research, magazine publications & presentations
+Scientific presentations
 </h2>
 
 <p>
-Scientific work spanning clinical research, case reporting
-and academic presentations.
+Clinical research, case reporting and scientific
+presentations at TNASICON 2026.
 </p>
 
 </div>
@@ -1732,7 +1826,7 @@ and academic presentations.
 
 <div class="research-card reveal">
 
-<div class="research-label">
+<div class="research-type">
 Poster Presentation
 </div>
 
@@ -1750,7 +1844,7 @@ TNASICON 2026
 
 <div class="research-card reveal">
 
-<div class="research-label">
+<div class="research-type">
 Poster Presentation
 </div>
 
@@ -1768,7 +1862,7 @@ TNASICON 2026
 
 <div class="research-card reveal">
 
-<div class="research-label">
+<div class="research-type">
 Paper Presentation
 </div>
 
@@ -1787,7 +1881,7 @@ TNASICON 2026
 
 <div class="research-card reveal">
 
-<div class="research-label">
+<div class="research-type">
 Magazine Publications
 </div>
 
@@ -1796,12 +1890,12 @@ Clinical & Academic Writing
 </h3>
 
 <p>
-Academic and professional contributions developed through
-clinical learning, surgical education and evidence-based
-practice.
+Academic contributions developed through clinical learning,
+surgical education and evidence-based practice.
 </p>
 
 </div>
+
 
 </div>
 
@@ -1811,7 +1905,7 @@ practice.
 
 
 <!-- =========================
-     ASSOCIATIONS
+     PROFESSIONAL MEMBERSHIPS
 ========================= -->
 
 <section>
@@ -1820,55 +1914,53 @@ practice.
 
 <div class="section-head reveal">
 
-<div class="section-kicker">
+<div class="kicker">
 Professional Engagement
 </div>
 
 <h2>
-Associations & volunteering
+Memberships & associations
 </h2>
 
 </div>
 
 
-<div class="association-grid">
+<div class="membership-grid">
 
-<div class="association reveal">
+<div class="membership reveal">
 
 <h3>
 Associations of Surgeons of India
 </h3>
 
 <p>
-Professional Association • July 2026
+Professional Association • 2026
 </p>
 
 </div>
 
 
-<div class="association reveal">
+<div class="membership reveal">
 
 <h3>
-Academic & Surgical Community
+Academic Conferences
 </h3>
 
 <p>
-Participation in conferences, presentations and
-continuing professional development.
+Participation in scientific meetings and presentations.
 </p>
 
 </div>
 
 
-<div class="association reveal">
+<div class="membership reveal">
 
 <h3>
-Medical Volunteering
+Continuing Medical Education
 </h3>
 
 <p>
-Professional and academic volunteering activities
-within the medical community.
+Ongoing professional and academic development.
 </p>
 
 </div>
@@ -1888,27 +1980,33 @@ within the medical community.
 
 <div class="container">
 
-<div class="cv-box reveal">
+<div class="cv reveal">
 
 <div>
 
-<div class="section-kicker">
+<div class="kicker">
 Curriculum Vitae
 </div>
 
 <h2>
-A detailed record of my professional journey.
+A complete record of my professional journey.
 </h2>
 
 <p>
-Education, clinical experience, research,
-presentations, courses and professional development.
+Education • Clinical Experience • Research •
+Presentations • Professional Development
 </p>
 
 </div>
 
-<a href="#" class="btn btn-primary">
+<!-- Replace cv.pdf with your actual CV filename -->
+
+<a href="cv.pdf"
+class="btn btn-primary"
+download>
+
 Download CV
+
 </a>
 
 </div>
@@ -1928,7 +2026,7 @@ Download CV
 
 <div class="section-head reveal">
 
-<div class="section-kicker">
+<div class="kicker">
 Contact
 </div>
 
@@ -1937,8 +2035,7 @@ Let's connect.
 </h2>
 
 <p>
-For academic, professional and research-related
-communication.
+For academic, professional and research-related communication.
 </p>
 
 </div>
@@ -1948,19 +2045,28 @@ communication.
 
 <p>
 Dr. B. Sugan<br>
-General Surgery • Clinical Practice • Research
+MBBS • MS General Surgery<br>
+Chennai, India
 </p>
 
-<div class="contact-links">
+<div class="contact-buttons">
+
+<!-- Replace the email below with your actual email -->
 
 <a href="mailto:YOUR-EMAIL@example.com"
 class="btn btn-primary">
+
 Email Me
+
 </a>
+
+<!-- Replace # with your LinkedIn URL -->
 
 <a href="#"
 class="btn btn-outline">
+
 LinkedIn
+
 </a>
 
 </div>
@@ -1978,7 +2084,7 @@ LinkedIn
 
 <footer>
 
-<div class="container footer-inner">
+<div class="container footer">
 
 <p>
 © 2026 Dr. B. Sugan
@@ -1995,57 +2101,92 @@ General Surgery • Clinical Practice • Academic Portfolio
 
 <script>
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 
 const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll",()=>{
+
     if(window.scrollY > 30){
+
         navbar.classList.add("scrolled");
+
     }else{
+
         navbar.classList.remove("scrolled");
+
     }
+
 });
 
 
-/* SCROLL REVEAL */
+/* =========================
+   SCROLL ANIMATION
+========================= */
 
-const observer = new IntersectionObserver(
+const observer =
+new IntersectionObserver(
+
 (entries)=>{
+
     entries.forEach(entry=>{
+
         if(entry.isIntersecting){
+
             entry.target.classList.add("visible");
+
         }
+
     });
+
 },
+
 {
     threshold:.08
+}
+
+);
+
+document
+.querySelectorAll(".reveal")
+.forEach(element=>{
+
+    observer.observe(element);
+
 });
 
-document.querySelectorAll(".reveal").forEach(el=>{
-    observer.observe(el);
-});
 
+/* =========================
+   COURSE FILTER
+========================= */
 
-/* COURSE FILTER */
+const filters =
+document.querySelectorAll(".filter");
 
-const filters = document.querySelectorAll(".filter");
-const courses = document.querySelectorAll(".course");
+const courses =
+document.querySelectorAll(".course");
 
 filters.forEach(filter=>{
 
     filter.addEventListener("click",()=>{
 
-        filters.forEach(f=>f.classList.remove("active"));
+        filters.forEach(button=>{
+            button.classList.remove("active");
+        });
 
         filter.classList.add("active");
 
-        const category = filter.dataset.filter;
+        const category =
+        filter.dataset.filter;
 
         courses.forEach(course=>{
 
-            if(category === "all" ||
-               course.dataset.category === category){
+            if(
+                category === "all" ||
+                course.dataset.category === category
+            ){
 
                 course.style.display="block";
 
@@ -2062,10 +2203,15 @@ filters.forEach(filter=>{
 });
 
 
-/* ACTIVE NAVIGATION */
+/* =========================
+   ACTIVE NAVIGATION
+========================= */
 
-const sections = document.querySelectorAll("section[id]");
-const links = document.querySelectorAll(".nav-links a");
+const sections =
+document.querySelectorAll("section[id]");
+
+const navLinks =
+document.querySelectorAll(".nav-links a");
 
 window.addEventListener("scroll",()=>{
 
@@ -2073,20 +2219,30 @@ window.addEventListener("scroll",()=>{
 
     sections.forEach(section=>{
 
-        const sectionTop=section.offsetTop-180;
+        const top =
+        section.offsetTop - 180;
 
-        if(window.scrollY >= sectionTop){
-            current=section.getAttribute("id");
+        if(window.scrollY >= top){
+
+            current =
+            section.getAttribute("id");
+
         }
 
     });
 
-    links.forEach(link=>{
+    navLinks.forEach(link=>{
 
         link.style.color="";
 
-        if(link.getAttribute("href")==="#"+current){
-            link.style.color="var(--accent)";
+        if(
+            link.getAttribute("href")
+            === "#" + current
+        ){
+
+            link.style.color =
+            "var(--teal)";
+
         }
 
     });
@@ -2097,4 +2253,3 @@ window.addEventListener("scroll",()=>{
 
 </body>
 </html>
-```
