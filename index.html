@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
 
 <title>Dr. B. Sugan | General Surgery Resident</title>
 
-<meta name="description" content="Dr. B. Sugan - MS General Surgery Resident, MBBS. Emergency, ICU and surgical care.">
+<meta name="description" content="Dr. B. Sugan - M.S. General Surgery Resident, MBBS, Diploma in Behavioral Sciences, Diploma in Diet and Nutrition and FIFA Diploma in Football Medicine.">
 
 <style>
 
@@ -29,7 +30,7 @@ a {
     color: inherit;
 }
 
-/* NAVIGATION */
+/* ================= NAVIGATION ================= */
 
 nav {
     position: fixed;
@@ -58,7 +59,7 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 25px;
+    gap: 22px;
     list-style: none;
 }
 
@@ -66,21 +67,19 @@ nav {
     font-size: 14px;
     color: #374151;
     font-weight: 600;
-    transition: 0.3s;
 }
 
 .nav-links a:hover {
     color: #0f766e;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background:
-        linear-gradient(135deg, #ecfeff 0%, #f8fafc 50%, #eefdf8 100%);
+    background: linear-gradient(135deg,#ecfeff 0%,#f8fafc 50%,#eefdf8 100%);
     padding: 120px 25px 70px;
 }
 
@@ -120,7 +119,7 @@ nav {
     font-size: 25px;
     color: #374151;
     font-weight: 500;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .hero p {
@@ -163,6 +162,8 @@ nav {
     color: white;
 }
 
+/* ================= PROFILE PHOTO ================= */
+
 .hero-card {
     background: white;
     padding: 35px;
@@ -171,23 +172,20 @@ nav {
     text-align: center;
 }
 
-.doctor-icon {
-    width: 120px;
-    height: 120px;
-    margin: auto;
+.profile-photo {
+    width: 210px;
+    height: 210px;
+    object-fit: cover;
     border-radius: 50%;
-    background: #ccfbf1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 55px;
-    color: #0f766e;
-    margin-bottom: 20px;
+    border: 6px solid #ccfbf1;
+    margin: auto;
+    display: block;
+    background: #e5e7eb;
 }
 
 .hero-card h3 {
     font-size: 24px;
-    margin-bottom: 8px;
+    margin-top: 20px;
 }
 
 .hero-card p {
@@ -195,7 +193,7 @@ nav {
     color: #6b7280;
 }
 
-/* GENERAL */
+/* ================= GENERAL ================= */
 
 section {
     padding: 90px 25px;
@@ -221,7 +219,7 @@ section {
     color: #6b7280;
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
 
 .about {
     background: white;
@@ -253,7 +251,7 @@ section {
     color: #115e59;
 }
 
-/* EDUCATION */
+/* ================= EDUCATION ================= */
 
 .education {
     background: #f5f8fb;
@@ -278,7 +276,7 @@ section {
 .timeline-item {
     position: relative;
     padding-left: 65px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .timeline-dot {
@@ -307,10 +305,9 @@ section {
 .timeline-card .date {
     color: #6b7280;
     font-size: 14px;
-    margin-bottom: 10px;
 }
 
-/* EXPERIENCE */
+/* ================= EXPERIENCE ================= */
 
 .experience {
     background: white;
@@ -319,20 +316,15 @@ section {
 .experience-card {
     background: #f8fafc;
     border-radius: 15px;
-    padding: 30px;
-    margin-bottom: 25px;
+    padding: 28px;
+    margin-bottom: 20px;
     border: 1px solid #e5e7eb;
-    transition: 0.3s;
-}
-
-.experience-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
 }
 
 .experience-card h3 {
     color: #0f766e;
     font-size: 21px;
+    margin-bottom: 4px;
 }
 
 .experience-card .hospital {
@@ -345,16 +337,7 @@ section {
     font-size: 14px;
 }
 
-.experience-card ul {
-    margin-top: 15px;
-    padding-left: 20px;
-}
-
-.experience-card li {
-    margin-bottom: 8px;
-}
-
-/* SKILLS */
+/* ================= SKILLS ================= */
 
 .skills {
     background: #f5f8fb;
@@ -376,7 +359,7 @@ section {
     box-shadow: 0 5px 15px rgba(0,0,0,0.04);
 }
 
-/* COURSES */
+/* ================= COURSES ================= */
 
 .courses {
     background: white;
@@ -405,7 +388,7 @@ section {
     font-size: 14px;
 }
 
-/* CERTIFICATIONS */
+/* ================= CERTIFICATES ================= */
 
 .certifications {
     background: #f5f8fb;
@@ -414,27 +397,44 @@ section {
 .cert-grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 18px;
+    gap: 20px;
 }
 
 .cert {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 22px;
+    border-radius: 12px;
     border-left: 4px solid #0f766e;
 }
 
 .cert strong {
     display: block;
     color: #111827;
+    margin-bottom: 5px;
 }
 
 .cert span {
+    display: block;
     color: #6b7280;
     font-size: 14px;
+    margin-bottom: 12px;
 }
 
-/* PRESENTATIONS */
+.view-certificate {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 6px;
+    background: #0f766e;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.view-certificate:hover {
+    background: #115e59;
+}
+
+/* ================= RESEARCH ================= */
 
 .presentations {
     background: white;
@@ -466,10 +466,36 @@ section {
     margin-top: 8px;
 }
 
-/* PUBLICATIONS */
+/* ================= EDITORIAL BOARD ================= */
+
+.editorial {
+    background: #f5f8fb;
+}
+
+.editorial-card {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    border-left: 5px solid #0f766e;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.editorial-card h3 {
+    color: #0f766e;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.editorial-card p {
+    color: #6b7280;
+}
+
+/* ================= MAGAZINE PUBLICATIONS ================= */
 
 .publications {
-    background: #f5f8fb;
+    background: white;
 }
 
 .publication-grid {
@@ -479,7 +505,7 @@ section {
 }
 
 .publication {
-    background: white;
+    background: #f8fafc;
     padding: 25px;
     border-radius: 12px;
 }
@@ -494,10 +520,10 @@ section {
     font-size: 14px;
 }
 
-/* MEMBERSHIPS */
+/* ================= MEMBERSHIPS ================= */
 
 .memberships {
-    background: white;
+    background: #f5f8fb;
 }
 
 .membership-grid {
@@ -509,9 +535,9 @@ section {
 .membership {
     padding: 25px;
     border-radius: 12px;
-    background: #f0fdfa;
+    background: white;
     text-align: center;
-    border: 1px solid #ccfbf1;
+    border: 1px solid #e5e7eb;
 }
 
 .membership h3 {
@@ -519,7 +545,7 @@ section {
     font-size: 17px;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
 
 .contact {
     background: #0f766e;
@@ -555,7 +581,7 @@ section {
     text-decoration: underline;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer {
     background: #064e3b;
@@ -565,9 +591,9 @@ footer {
     font-size: 14px;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
-@media(max-width: 900px) {
+@media(max-width:900px) {
 
     .nav-links {
         display: none;
@@ -613,7 +639,7 @@ footer {
     }
 }
 
-@media(max-width: 500px) {
+@media(max-width:500px) {
 
     .hero h1 {
         font-size: 36px;
@@ -634,6 +660,11 @@ footer {
     section {
         padding: 65px 18px;
     }
+
+    .profile-photo {
+        width: 170px;
+        height: 170px;
+    }
 }
 
 </style>
@@ -641,29 +672,35 @@ footer {
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- ================= NAVIGATION ================= -->
 
 <nav>
+
 <div class="nav-container">
 
-<div class="logo">Dr. B. Sugan</div>
+<div class="logo">
+Dr. B. Sugan
+</div>
 
 <ul class="nav-links">
+
 <li><a href="#about">About</a></li>
 <li><a href="#education">Education</a></li>
 <li><a href="#experience">Experience</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#courses">Courses</a></li>
-<li><a href="#presentations">Research</a></li>
-<li><a href="#memberships">Memberships</a></li>
+<li><a href="#certifications">Certificates</a></li>
+<li><a href="#research">Research</a></li>
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
 </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
@@ -684,14 +721,12 @@ M.S. General Surgery Resident
 </h2>
 
 <p>
-MBBS, DBS, DDN
+MBBS • FIFA Diploma in Football Medicine • DBS • DDN
 </p>
 
 <p style="margin-top:15px;">
-Highly skilled and dedicated General Surgery Resident with experience in
-emergency medicine, ICU care, trauma, laparoscopic and open surgical
-procedures. Committed to providing precise, compassionate and
-evidence-based patient care.
+General Surgery Resident with clinical experience in
+Emergency Medicine, ICU Care, Trauma and General Surgery.
 </p>
 
 <div class="hero-buttons">
@@ -711,15 +746,21 @@ Contact Me
 
 <div class="hero-card">
 
-<div class="doctor-icon">
-⚕
-</div>
+<img
+src="images/profile.jpg"
+alt="Dr. B. Sugan"
+class="profile-photo"
+>
 
-<h3>Dr. B. Sugan</h3>
+<h3>
+Dr. B. Sugan
+</h3>
 
-<p>M.S. General Surgery Resident</p>
+<p>
+M.S. General Surgery Resident
+</p>
 
-<p style="margin-top:15px;">
+<p style="margin-top:10px;">
 Madha Medical College & Research Institute<br>
 Chennai, Tamil Nadu
 </p>
@@ -731,7 +772,7 @@ Chennai, Tamil Nadu
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 
 <section class="about" id="about">
 
@@ -750,26 +791,22 @@ Chennai, Tamil Nadu
 <div class="about-text">
 
 <p>
-I am a General Surgery Resident with a strong interest in surgical care,
-emergency medicine, critical care and trauma surgery.
+I am a General Surgery Resident with clinical experience
+in emergency medicine, critical care, trauma and surgical care.
 </p>
 
 <p>
-My clinical experience includes working in Emergency Rooms, Intensive Care
-Units and surgical departments across multiple healthcare institutions.
-These experiences have strengthened my ability to assess critically ill
-patients, prioritize emergencies and work effectively within
-multidisciplinary teams.
+My professional interests include General Surgery,
+Emergency Surgery, Critical Care, Trauma Surgery and
+minimally invasive surgical techniques.
 </p>
 
 <p>
-I am particularly interested in developing my expertise in laparoscopic and
-open surgical techniques while maintaining a patient-centred approach to
-clinical practice.
+I am committed to continuous learning, professional development
+and providing high-quality patient care.
 </p>
 
 </div>
-
 
 <div class="info-card">
 
@@ -780,7 +817,7 @@ M.S. General Surgery Resident
 
 <div>
 <strong>Institution</strong><br>
-Madha Medical College & Research Institute
+Madha Medical College and Research Institute
 </div>
 
 <div>
@@ -790,7 +827,7 @@ Chennai, Tamil Nadu
 
 <div>
 <strong>Clinical Interests</strong><br>
-General Surgery • Emergency Medicine • Critical Care • Trauma Surgery
+General Surgery • Emergency Care • Critical Care • Trauma
 </div>
 
 </div>
@@ -802,7 +839,7 @@ General Surgery • Emergency Medicine • Critical Care • Trauma Surgery
 </section>
 
 
-<!-- EDUCATION -->
+<!-- ================= EDUCATION ================= -->
 
 <section class="education" id="education">
 
@@ -812,13 +849,14 @@ General Surgery • Emergency Medicine • Critical Care • Trauma Surgery
 
 <h2>Education</h2>
 
-<p>Academic Journey</p>
+<p>Academic & Professional Qualifications</p>
 
 </div>
 
-
 <div class="timeline">
 
+
+<!-- MS -->
 
 <div class="timeline-item">
 
@@ -834,7 +872,9 @@ February 2025 – Present
 
 <p>
 The Tamil Nadu Dr. M.G.R. Medical University
-<br>
+</p>
+
+<p>
 Madha Medical College and Research Institute, Chennai
 </p>
 
@@ -842,6 +882,8 @@ Madha Medical College and Research Institute, Chennai
 
 </div>
 
+
+<!-- MBBS -->
 
 <div class="timeline-item">
 
@@ -857,10 +899,10 @@ August 2015 – January 2022
 
 <p>
 Pondicherry University
-<br>
+</p>
+
+<p>
 Pondicherry Institute of Medical Sciences, Pondicherry
-<br>
-A Central University under Ministry of Education, Government of India
 </p>
 
 </div>
@@ -868,22 +910,68 @@ A Central University under Ministry of Education, Government of India
 </div>
 
 
+<!-- FIFA -->
+
 <div class="timeline-item">
 
 <div class="timeline-dot"></div>
 
 <div class="timeline-card">
 
-<h3>Higher Secondary Education</h3>
+<h3>FIFA Diploma in Football Medicine</h3>
 
 <div class="date">
-January 2014 – January 2015
+December 2025
 </div>
 
 <p>
-Department of Government Examinations, Tamil Nadu Government
-<br>
-Kurinji Higher Secondary School, Namakkal
+FIFA
+</p>
+
+</div>
+
+</div>
+
+
+<!-- DBS -->
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-card">
+
+<h3>Diploma in Behavioral Sciences (DBS)</h3>
+
+<div class="date">
+July 2024
+</div>
+
+<p>
+European Open University / Academia Europe
+</p>
+
+</div>
+
+</div>
+
+
+<!-- DDN -->
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-card">
+
+<h3>Diploma in Diet and Nutrition (DDN)</h3>
+
+<div class="date">
+July 2024
+</div>
+
+<p>
+Oxford Home Study Centre
 </p>
 
 </div>
@@ -898,7 +986,7 @@ Kurinji Higher Secondary School, Namakkal
 </section>
 
 
-<!-- EXPERIENCE -->
+<!-- ================= EXPERIENCE ================= -->
 
 <section class="experience" id="experience">
 
@@ -925,33 +1013,6 @@ Madha Medical College and Research Institute, Chennai
 February 2025 – Present
 </div>
 
-<ul>
-
-<li>
-Assist supervising surgeons during a wide range of surgical procedures,
-including pre-operative evaluation, surgical techniques and post-operative care.
-</li>
-
-<li>
-Manage post-operative patients including monitoring vital signs,
-administering medications and evaluating wound healing.
-</li>
-
-<li>
-Participate in multidisciplinary team meetings to discuss patient care
-plans, treatment options and outcomes.
-</li>
-
-<li>
-Develop proficiency in laparoscopic and open surgical techniques.
-</li>
-
-<li>
-Participate in emergency procedures and trauma surgery.
-</li>
-
-</ul>
-
 </div>
 
 
@@ -960,37 +1021,13 @@ Participate in emergency procedures and trauma surgery.
 <h3>DMO – Emergency Room & ICU</h3>
 
 <div class="hospital">
-Promed Hospitals, Chennai, Tamil Nadu
+Promed Hospitals, Chennai
 </div>
 
 <div class="date">
 September 2024 – February 2025
 </div>
 
-<ul>
-
-<li>
-Provided direct patient care in Emergency Room and Intensive Care Unit settings.
-</li>
-
-<li>
-Conducted rapid patient assessments and identified emergent clinical situations.
-</li>
-
-<li>
-Collaborated with nurses and physicians to coordinate patient care.
-</li>
-
-<li>
-Assisted with emergency procedures and treatment protocols.
-</li>
-
-<li>
-Maintained accurate electronic medical records and patient documentation.
-</li>
-
-</ul>
-
 </div>
 
 
@@ -999,32 +1036,12 @@ Maintained accurate electronic medical records and patient documentation.
 <h3>DMO – Emergency Room & ICU</h3>
 
 <div class="hospital">
-Voluntary Health Services (VHS), Chennai, Tamil Nadu
+Voluntary Health Services (VHS), Chennai
 </div>
 
 <div class="date">
 February 2023 – July 2023
 </div>
-
-<ul>
-
-<li>
-Collaborated with interdisciplinary healthcare teams to develop individualized care plans.
-</li>
-
-<li>
-Maintained accurate and detailed patient records.
-</li>
-
-<li>
-Prioritized patient safety and satisfaction.
-</li>
-
-<li>
-Utilized critical thinking and clinical assessment skills in emergency and ICU settings.
-</li>
-
-</ul>
 
 </div>
 
@@ -1041,26 +1058,6 @@ Pondicherry Institute of Medical Sciences, Pondicherry
 January 2022 – January 2023
 </div>
 
-<ul>
-
-<li>
-Rotated through multiple medical and surgical departments.
-</li>
-
-<li>
-Assisted with patient evaluations, treatment plans and procedures under supervision.
-</li>
-
-<li>
-Participated in daily rounds, patient conferences and educational sessions.
-</li>
-
-<li>
-Worked with interdisciplinary healthcare teams to deliver patient-centred care.
-</li>
-
-</ul>
-
 </div>
 
 </div>
@@ -1068,7 +1065,7 @@ Worked with interdisciplinary healthcare teams to deliver patient-centred care.
 </section>
 
 
-<!-- SKILLS -->
+<!-- ================= SKILLS ================= -->
 
 <section class="skills" id="skills">
 
@@ -1085,19 +1082,12 @@ Worked with interdisciplinary healthcare teams to deliver patient-centred care.
 <div class="skills-grid">
 
 <div class="skill-card">Communication</div>
-
 <div class="skill-card">Interpersonal Skills</div>
-
 <div class="skill-card">Problem Solving</div>
-
 <div class="skill-card">Emergency Care</div>
-
 <div class="skill-card">Critical Care</div>
-
 <div class="skill-card">Surgical Skills</div>
-
 <div class="skill-card">Team Management</div>
-
 <div class="skill-card">Clinical Decision Making</div>
 
 </div>
@@ -1107,7 +1097,7 @@ Worked with interdisciplinary healthcare teams to deliver patient-centred care.
 </section>
 
 
-<!-- PROFESSIONAL COURSES -->
+<!-- ================= PROFESSIONAL COURSES ================= -->
 
 <section class="courses" id="courses">
 
@@ -1123,31 +1113,12 @@ Worked with interdisciplinary healthcare teams to deliver patient-centred care.
 
 <div class="course-grid">
 
-<div class="course-card">
-
-<h3>Diploma in Diet and Nutrition</h3>
-
-<p>
-European Open University • July 2024
-</p>
-
-</div>
-
 
 <div class="course-card">
 
-<h3>Diploma in Behavioral Science</h3>
-
-<p>
-Oxford Home Study Centre (OHSC) • July 2024
-</p>
-
-</div>
-
-
-<div class="course-card">
-
-<h3>FIFA Diploma in Football Medicine</h3>
+<h3>
+FIFA Diploma in Football Medicine
+</h3>
 
 <p>
 December 2025
@@ -1158,7 +1129,35 @@ December 2025
 
 <div class="course-card">
 
-<h3>Basic Life Support (BLS)</h3>
+<h3>
+Diploma in Behavioral Sciences
+</h3>
+
+<p>
+European Open University / Academia Europe • July 2024
+</p>
+
+</div>
+
+
+<div class="course-card">
+
+<h3>
+Diploma in Diet and Nutrition
+</h3>
+
+<p>
+Oxford Home Study Centre • July 2024
+</p>
+
+</div>
+
+
+<div class="course-card">
+
+<h3>
+Basic Life Support (BLS)
+</h3>
 
 <p>
 Save a Life Certifications – National Health Care Provider Solutions
@@ -1169,7 +1168,9 @@ Save a Life Certifications – National Health Care Provider Solutions
 
 <div class="course-card">
 
-<h3>Advanced Cardiac Life Support (ACLS)</h3>
+<h3>
+Advanced Cardiac Life Support (ACLS)
+</h3>
 
 <p>
 Save a Life Certifications – National Health Care Provider Solutions
@@ -1180,7 +1181,9 @@ Save a Life Certifications – National Health Care Provider Solutions
 
 <div class="course-card">
 
-<h3>Cardiopulmonary Resuscitation (CPR)</h3>
+<h3>
+Cardiopulmonary Resuscitation (CPR)
+</h3>
 
 <p>
 Save a Life Certifications – National Health Care Provider Solutions
@@ -1191,7 +1194,9 @@ Save a Life Certifications – National Health Care Provider Solutions
 
 <div class="course-card">
 
-<h3>Basic Course in Biomedical Research (BCBR)</h3>
+<h3>
+Basic Course in Biomedical Research
+</h3>
 
 <p>
 National Board of Examinations in Medical Sciences • January 2024
@@ -1202,7 +1207,9 @@ National Board of Examinations in Medical Sciences • January 2024
 
 <div class="course-card">
 
-<h3>ICMR Basic Course in Biomedical Research</h3>
+<h3>
+Basic Course in Biomedical Research
+</h3>
 
 <p>
 ICMR – National Institute of Epidemiology • July 2025
@@ -1210,6 +1217,7 @@ ICMR – National Institute of Epidemiology • July 2025
 
 </div>
 
+
 </div>
 
 </div>
@@ -1217,142 +1225,440 @@ ICMR – National Institute of Epidemiology • July 2025
 </section>
 
 
-<!-- CERTIFICATIONS -->
+<!-- ================= CERTIFICATES ================= -->
 
-<section class="certifications">
+<section class="certifications" id="certifications">
 
 <div class="container">
 
 <div class="section-title">
 
-<h2>Certifications & Continuing Education</h2>
+<h2>Certificates</h2>
 
-<p>Selected Medical & Academic Training</p>
+<p>Professional & Continuing Medical Education</p>
 
 </div>
-
 
 <div class="cert-grid">
 
 
 <div class="cert">
-<strong>Trauma Resuscitation & Critical Care</strong>
-<span>PGIMER, Chandigarh • January 2024</span>
+
+<strong>
+FIFA Diploma in Football Medicine
+</strong>
+
+<span>
+FIFA • December 2025
+</span>
+
+<a href="certificates/fifa-football-medicine.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>Diabetes and Cardiovascular Diseases</strong>
-<span>International Diabetes Federation, Belgium • July 2024</span>
+
+<strong>
+Diploma in Behavioral Sciences
+</strong>
+
+<span>
+European Open University / Academia Europe • July 2024
+</span>
+
+<a href="certificates/dbs.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>AI Series – Introduction to Healthcare</strong>
-<span>Stanford University – School of Medicine • January 2024</span>
+
+<strong>
+Diploma in Diet and Nutrition
+</strong>
+
+<span>
+Oxford Home Study Centre • July 2024
+</span>
+
+<a href="certificates/ddn.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>Management of Heart Failure in Hospitalized Patients</strong>
-<span>American College of Physicians • May 2024</span>
+
+<strong>
+Trauma Resuscitation & Critical Care
+</strong>
+
+<span>
+PGIMER, Chandigarh • January 2024
+</span>
+
+<a href="certificates/trauma-resuscitation.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>Advanced E-Hypertension Academy</strong>
-<span>Association of Physicians of India • January 2024</span>
+
+<strong>
+Diabetes and Cardiovascular Diseases
+</strong>
+
+<span>
+International Diabetes Federation • July 2024
+</span>
+
+<a href="certificates/diabetes-cardiovascular.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>ECG – Heart's Electrical Activity</strong>
-<span>Cardiological Society of India • January 2024</span>
+
+<strong>
+AI Series – Introduction to Healthcare
+</strong>
+
+<span>
+Stanford University School of Medicine • January 2024
+</span>
+
+<a href="certificates/ai-healthcare.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>Essentials of Palliative Care</strong>
-<span>Stanford University – School of Medicine • December 2024</span>
+
+<strong>
+Management of Heart Failure in Hospitalized Patients
+</strong>
+
+<span>
+American College of Physicians • May 2024
+</span>
+
+<a href="certificates/heart-failure.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>Care of Patients with Respiratory Failure</strong>
-<span>Stanford University – School of Medicine • December 2022</span>
+
+<strong>
+Advanced E-Hypertension Academy
+</strong>
+
+<span>
+Association of Physicians of India • January 2024
+</span>
+
+<a href="certificates/e-hypertension.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>Pain Management – Acute Pain Management</strong>
-<span>Stanford University – School of Medicine • December 2022</span>
+
+<strong>
+ECG – Heart's Electrical Activity
+</strong>
+
+<span>
+Cardiological Society of India • January 2024
+</span>
+
+<a href="certificates/ecg.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>Transition from Acute to Chronic Pain After Surgery</strong>
-<span>Stanford University – School of Medicine • October 2021</span>
+
+<strong>
+Essentials of Palliative Care
+</strong>
+
+<span>
+Stanford University School of Medicine • December 2024
+</span>
+
+<a href="certificates/palliative-care.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>Introduction to Food and Health</strong>
-<span>Stanford University • June 2021</span>
+
+<strong>
+Care of Patients with Respiratory Failure
+</strong>
+
+<span>
+Stanford University School of Medicine • December 2022
+</span>
+
+<a href="certificates/respiratory-failure.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>Mechanical Ventilation for COVID-19</strong>
-<span>Harvard Medical School • May 2021</span>
+
+<strong>
+Pain Management – Acute Pain Management
+</strong>
+
+<span>
+Stanford University School of Medicine • December 2022
+</span>
+
+<a href="certificates/pain-management.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>Introduction to Nipah Virus</strong>
-<span>World Health Organization • December 2022</span>
+
+<strong>
+Introduction to Food and Health
+</strong>
+
+<span>
+Stanford University • June 2021
+</span>
+
+<a href="certificates/food-health.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>Meningitis – Introduction</strong>
-<span>World Health Organization • May 2022</span>
+
+<strong>
+Mechanical Ventilation for COVID-19
+</strong>
+
+<span>
+Harvard Medical School • May 2021
+</span>
+
+<a href="certificates/mechanical-ventilation.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>Inequality Monitoring in HIV, TB and Malaria</strong>
-<span>World Health Organization • June 2022</span>
+
+<strong>
+Introduction to Nipah Virus
+</strong>
+
+<span>
+World Health Organization • December 2022
+</span>
+
+<a href="certificates/nipah.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>Transmission Based Precautions</strong>
-<span>World Health Organization • May 2021</span>
+
+<strong>
+Meningitis – Introduction
+</strong>
+
+<span>
+World Health Organization • May 2022
+</span>
+
+<a href="certificates/meningitis.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>Vital Signs – Understanding What the Body Is Telling Us</strong>
-<span>University of Pennsylvania • June 2021</span>
+
+<strong>
+Inequality Monitoring in HIV, TB and Malaria
+</strong>
+
+<span>
+World Health Organization • June 2022
+</span>
+
+<a href="certificates/inequality-hiv-tb-malaria.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>EMT Foundation – Specialization Course</strong>
-<span>University of Colorado System • November 2021</span>
+
+<strong>
+Transmission Based Precautions
+</strong>
+
+<span>
+World Health Organization • May 2021
+</span>
+
+<a href="certificates/transmission-precautions.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>Diabetes – The Essential Facts</strong>
-<span>University of Copenhagen • July 2021</span>
+
+<strong>
+Vital Signs – Understanding What the Body Is Telling Us
+</strong>
+
+<span>
+University of Pennsylvania • June 2021
+</span>
+
+<a href="certificates/vital-signs.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
 
 
 <div class="cert">
-<strong>Medical Emergencies – Airway, Breathing, Circulation</strong>
-<span>University of Colorado System • May 2022</span>
+
+<strong>
+EMT Foundation – Specialization Course
+</strong>
+
+<span>
+University of Colorado System • November 2021
+</span>
+
+<a href="certificates/emt-foundation.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
 </div>
+
+
+<div class="cert">
+
+<strong>
+Diabetes – The Essential Facts
+</strong>
+
+<span>
+University of Copenhagen • July 2021
+</span>
+
+<a href="certificates/diabetes-essential.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
+</div>
+
+
+<div class="cert">
+
+<strong>
+Medical Emergencies – Airway, Breathing, Circulation
+</strong>
+
+<span>
+University of Colorado System • May 2022
+</span>
+
+<a href="certificates/medical-emergencies.pdf"
+target="_blank"
+class="view-certificate">
+View Certificate
+</a>
+
+</div>
+
 
 </div>
 
@@ -1361,9 +1667,9 @@ ICMR – National Institute of Epidemiology • July 2025
 </section>
 
 
-<!-- PRESENTATIONS -->
+<!-- ================= RESEARCH ================= -->
 
-<section class="presentations" id="presentations">
+<section class="presentations" id="research">
 
 <div class="container">
 
@@ -1435,7 +1741,61 @@ TNASICON 2026
 </section>
 
 
-<!-- MAGAZINE PUBLICATIONS -->
+<!-- ================= EDITORIAL BOARD ================= -->
+
+<section class="editorial">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Editorial Board</h2>
+
+<p>Academic & Editorial Responsibilities</p>
+
+</div>
+
+
+<div class="editorial-card">
+
+<h3>
+Editorial Board Member
+</h3>
+
+<p>
+<strong>
+Journal of AI and Integrative Medicine (JAIIM)
+</strong>
+</p>
+
+<p>
+Novadex Publications
+</p>
+
+<p>
+2026 – Present
+</p>
+
+<p style="margin-top:15px;">
+Editorial Board Member contributing to the academic and
+editorial activities of the Journal of AI and Integrative Medicine.
+</p>
+
+<a href="https://journals.novadexpub.com/"
+target="_blank"
+class="view-certificate"
+style="margin-top:15px;">
+Visit Journal
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= MAGAZINE PUBLICATIONS ================= -->
 
 <section class="publications">
 
@@ -1499,6 +1859,7 @@ TNASICON 2026
 <p>Health and Beauty Magazine • July 2017</p>
 </div>
 
+
 </div>
 
 </div>
@@ -1506,9 +1867,9 @@ TNASICON 2026
 </section>
 
 
-<!-- MEMBERSHIPS -->
+<!-- ================= MEMBERSHIPS ================= -->
 
-<section class="memberships" id="memberships">
+<section class="memberships">
 
 <div class="container">
 
@@ -1525,45 +1886,96 @@ TNASICON 2026
 
 
 <div class="membership">
-<h3>Associations of Surgeons of India</h3>
-<p>Member • July 2026</p>
+
+<h3>
+Associations of Surgeons of India
+</h3>
+
+<p>
+Member • July 2026
+</p>
+
 </div>
 
 
 <div class="membership">
-<h3>World Medical Association</h3>
-<p>Associate Member • January 2024</p>
+
+<h3>
+World Medical Association
+</h3>
+
+<p>
+Associate Member • January 2024
+</p>
+
 </div>
 
 
 <div class="membership">
-<h3>European Society of Cardiology</h3>
-<p>Associate Member • February 2024</p>
+
+<h3>
+European Society of Cardiology
+</h3>
+
+<p>
+Associate Member • February 2024
+</p>
+
 </div>
 
 
 <div class="membership">
-<h3>IASSS</h3>
-<p>Member • February 2024</p>
+
+<h3>
+IASSS
+</h3>
+
+<p>
+Member • February 2024
+</p>
+
 </div>
 
 
 <div class="membership">
-<h3>American College of Physicians</h3>
-<p>Member • January 2024</p>
+
+<h3>
+American College of Physicians
+</h3>
+
+<p>
+Member • January 2024
+</p>
+
 </div>
 
 
 <div class="membership">
-<h3>Indiana Public Health Association</h3>
-<p>Member • January 2024</p>
+
+<h3>
+Indiana Public Health Association
+</h3>
+
+<p>
+Member • January 2024
+</p>
+
 </div>
 
 
 <div class="membership">
-<h3>International Society for Evolution, Medicine & Public Health</h3>
-<p>Member</p>
+
+<h3>
+International Society for Evolution,
+Medicine & Public Health
+</h3>
+
+<p>
+Member
+</p>
+
 </div>
+
 
 </div>
 
@@ -1572,7 +1984,7 @@ TNASICON 2026
 </section>
 
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
 
 <section class="contact" id="contact">
 
@@ -1616,7 +2028,8 @@ dr.b.sugan@gmail.com
 
 <h3>Instagram</h3>
 
-<a href="https://instagram.com/dr_sugan" target="_blank">
+<a href="https://instagram.com/dr_sugan"
+target="_blank">
 @dr_sugan
 </a>
 
@@ -1627,20 +2040,10 @@ dr.b.sugan@gmail.com
 
 <h3>LinkedIn</h3>
 
-<a href="#" target="_blank">
-Dr. Sugan
+<a href="https://www.linkedin.com/in/dr-b-sugan-95516524a/"
+target="_blank">
+Dr. B. Sugan
 </a>
-
-</div>
-
-
-<div class="contact-card">
-
-<h3>Professional Profile</h3>
-
-<p>
-General Surgery • Emergency Care • Critical Care
-</p>
 
 </div>
 
@@ -1652,7 +2055,7 @@ General Surgery • Emergency Care • Critical Care
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1666,6 +2069,6 @@ M.S. General Surgery Resident • Chennai, India
 
 </footer>
 
-
 </body>
 </html>
+```
