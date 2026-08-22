@@ -1,15 +1,22 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dr. B. Sugan | General Surgery Resident</title>
+<title>Dr. B. Sugan | General Surgeon</title>
 
-<meta name="description" content="Dr. B. Sugan - M.S. General Surgery Resident, MBBS, Diploma in Behavioral Sciences, Diploma in Diet and Nutrition and FIFA Diploma in Football Medicine.">
+<meta name="description"
+content="Dr. B. Sugan - M.S. General Surgery Resident, MBBS, FIFA Diploma in Football Medicine, Diploma in Behavioral Sciences and Diploma in Diet & Nutrition.">
 
 <style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
 
 * {
     margin: 0;
@@ -20,188 +27,23 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f5f8fb;
+    background: #f6f9fb;
     color: #1f2937;
     line-height: 1.7;
 }
 
 a {
     text-decoration: none;
-    color: inherit;
-}
-
-/* ================= NAVIGATION ================= */
-
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-    z-index: 1000;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 15px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #0f766e;
-}
-
-.nav-links {
-    display: flex;
-    gap: 22px;
-    list-style: none;
-}
-
-.nav-links a {
-    font-size: 14px;
-    color: #374151;
-    font-weight: 600;
-}
-
-.nav-links a:hover {
-    color: #0f766e;
-}
-
-/* ================= HERO ================= */
-
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(135deg,#ecfeff 0%,#f8fafc 50%,#eefdf8 100%);
-    padding: 120px 25px 70px;
-}
-
-.hero-container {
-    max-width: 1150px;
-    margin: auto;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.hero-tag {
-    display: inline-block;
-    background: #ccfbf1;
-    color: #115e59;
-    padding: 7px 16px;
-    border-radius: 30px;
-    font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: 62px;
-    line-height: 1.1;
-    color: #111827;
-    margin-bottom: 15px;
-}
-
-.hero h1 span {
-    color: #0f766e;
-}
-
-.hero h2 {
-    font-size: 25px;
-    color: #374151;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 17px;
-    color: #4b5563;
-    max-width: 700px;
-}
-
-.hero-buttons {
-    margin-top: 30px;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    padding: 13px 24px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn-primary {
-    background: #0f766e;
-    color: white;
-}
-
-.btn-primary:hover {
-    background: #115e59;
-    transform: translateY(-2px);
-}
-
-.btn-outline {
-    border: 2px solid #0f766e;
-    color: #0f766e;
-}
-
-.btn-outline:hover {
-    background: #0f766e;
-    color: white;
-}
-
-/* ================= PROFILE PHOTO ================= */
-
-.hero-card {
-    background: white;
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(15,118,110,0.12);
-    text-align: center;
-}
-
-.profile-photo {
-    width: 210px;
-    height: 210px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 6px solid #ccfbf1;
-    margin: auto;
-    display: block;
-    background: #e5e7eb;
-}
-
-.hero-card h3 {
-    font-size: 24px;
-    margin-top: 20px;
-}
-
-.hero-card p {
-    font-size: 14px;
-    color: #6b7280;
-}
-
-/* ================= GENERAL ================= */
-
-section {
-    padding: 90px 25px;
 }
 
 .container {
     max-width: 1150px;
     margin: auto;
+    padding: 0 25px;
+}
+
+section {
+    padding: 90px 0;
 }
 
 .section-title {
@@ -211,387 +53,899 @@ section {
 
 .section-title h2 {
     font-size: 38px;
-    color: #111827;
-    margin-bottom: 10px;
+    color: #102a43;
+    margin-bottom: 8px;
 }
 
 .section-title p {
-    color: #6b7280;
+    color: #64748b;
 }
 
-/* ================= ABOUT ================= */
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.07);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0f766e;
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #0f766e;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 120px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ecfeff,
+        #f8fafc 55%,
+        #effcf8
+    );
+}
+
+.hero-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 0.8fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.hero-label {
+
+    display: inline-block;
+
+    padding: 7px 16px;
+
+    background: #ccfbf1;
+
+    color: #115e59;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+
+    font-size: 64px;
+
+    line-height: 1.05;
+
+    color: #102a43;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+
+    color: #0f766e;
+}
+
+.hero h2 {
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    color: #475569;
+
+    margin-bottom: 20px;
+}
+
+.hero-description {
+
+    max-width: 700px;
+
+    font-size: 17px;
+
+    color: #475569;
+}
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+.btn {
+
+    display: inline-block;
+
+    padding: 13px 23px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+.btn-primary {
+
+    background: #0f766e;
+
+    color: white;
+}
+
+.btn-primary:hover {
+
+    background: #115e59;
+
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+
+    border: 2px solid #0f766e;
+
+    color: #0f766e;
+}
+
+.btn-outline:hover {
+
+    background: #0f766e;
+
+    color: white;
+}
+
+
+/* =====================================================
+   PROFILE CARD
+===================================================== */
+
+.profile-card {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow:
+    0 20px 50px rgba(15,118,110,0.12);
+}
+
+.profile-photo {
+
+    width: 220px;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 7px solid #ccfbf1;
+
+    background: #e5e7eb;
+
+    display: block;
+
+    margin: auto;
+}
+
+.profile-card h3 {
+
+    margin-top: 20px;
+
+    font-size: 23px;
+
+    color: #102a43;
+}
+
+.profile-card p {
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+.social-links {
+
+    margin-top: 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.social-links a {
+
+    padding: 8px 14px;
+
+    background: #f0fdfa;
+
+    color: #0f766e;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
 
 .about {
+
     background: white;
 }
 
-.about-content {
+.about-grid {
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 50px;
 }
 
 .about-text p {
+
     margin-bottom: 18px;
-    color: #4b5563;
+
+    color: #475569;
 }
 
-.info-card {
+.profile-info {
+
     background: #f0fdfa;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
     border-left: 5px solid #0f766e;
-    padding: 25px;
-    border-radius: 10px;
 }
 
-.info-card div {
-    margin-bottom: 15px;
+.info-item {
+
+    margin-bottom: 18px;
 }
 
-.info-card strong {
+.info-item:last-child {
+
+    margin-bottom: 0;
+}
+
+.info-item strong {
+
     color: #115e59;
 }
 
-/* ================= EDUCATION ================= */
+
+/* =====================================================
+   EDUCATION
+===================================================== */
 
 .education {
-    background: #f5f8fb;
+
+    background: #f6f9fb;
 }
 
 .timeline {
-    position: relative;
+
     max-width: 900px;
+
     margin: auto;
+
+    position: relative;
 }
 
 .timeline::before {
+
     content: "";
+
     position: absolute;
+
     left: 20px;
+
     top: 0;
+
     width: 3px;
+
     height: 100%;
+
     background: #99f6e4;
 }
 
 .timeline-item {
+
     position: relative;
+
     padding-left: 65px;
+
     margin-bottom: 30px;
 }
 
 .timeline-dot {
+
     position: absolute;
+
     left: 9px;
+
     top: 5px;
+
     width: 25px;
+
     height: 25px;
+
     background: #0f766e;
+
     border-radius: 50%;
+
     border: 5px solid #ccfbf1;
 }
 
 .timeline-card {
+
     background: white;
+
     padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+
+    border-radius: 13px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
 }
 
 .timeline-card h3 {
+
     color: #0f766e;
-    margin-bottom: 5px;
-}
 
-.timeline-card .date {
-    color: #6b7280;
-    font-size: 14px;
-}
-
-/* ================= EXPERIENCE ================= */
-
-.experience {
-    background: white;
-}
-
-.experience-card {
-    background: #f8fafc;
-    border-radius: 15px;
-    padding: 28px;
-    margin-bottom: 20px;
-    border: 1px solid #e5e7eb;
-}
-
-.experience-card h3 {
-    color: #0f766e;
-    font-size: 21px;
     margin-bottom: 4px;
 }
 
-.experience-card .hospital {
-    font-weight: bold;
-    color: #374151;
-}
+.timeline-card .date {
 
-.experience-card .date {
-    color: #6b7280;
+    color: #64748b;
+
     font-size: 14px;
-}
 
-/* ================= SKILLS ================= */
-
-.skills {
-    background: #f5f8fb;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
-}
-
-.skill-card {
-    background: white;
-    padding: 25px;
-    text-align: center;
-    border-radius: 12px;
-    font-weight: bold;
-    color: #115e59;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
-}
-
-/* ================= COURSES ================= */
-
-.courses {
-    background: white;
-}
-
-.course-grid {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
-}
-
-.course-card {
-    padding: 22px;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    background: #f8fafc;
-}
-
-.course-card h3 {
-    color: #0f766e;
-    font-size: 17px;
-}
-
-.course-card p {
-    color: #6b7280;
-    font-size: 14px;
-}
-
-/* ================= CERTIFICATES ================= */
-
-.certifications {
-    background: #f5f8fb;
-}
-
-.cert-grid {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
-}
-
-.cert {
-    background: white;
-    padding: 22px;
-    border-radius: 12px;
-    border-left: 4px solid #0f766e;
-}
-
-.cert strong {
-    display: block;
-    color: #111827;
-    margin-bottom: 5px;
-}
-
-.cert span {
-    display: block;
-    color: #6b7280;
-    font-size: 14px;
-    margin-bottom: 12px;
-}
-
-.view-certificate {
-    display: inline-block;
-    padding: 7px 14px;
-    border-radius: 6px;
-    background: #0f766e;
-    color: white;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.view-certificate:hover {
-    background: #115e59;
-}
-
-/* ================= RESEARCH ================= */
-
-.presentations {
-    background: white;
-}
-
-.presentation-card {
-    background: #f8fafc;
-    padding: 28px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    border-left: 5px solid #0f766e;
-}
-
-.presentation-type {
-    color: #0f766e;
-    font-size: 13px;
-    font-weight: bold;
-    text-transform: uppercase;
     margin-bottom: 8px;
 }
 
-.presentation-card h3 {
-    font-size: 18px;
-    color: #111827;
+
+/* =====================================================
+   EXPERIENCE
+===================================================== */
+
+.experience {
+
+    background: white;
 }
 
-.presentation-card p {
-    color: #6b7280;
+.experience-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.experience-card {
+
+    padding: 28px;
+
+    background: #f8fafc;
+
+    border-radius: 14px;
+
+    border: 1px solid #e5e7eb;
+
+    transition: 0.25s;
+}
+
+.experience-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.experience-card h3 {
+
+    color: #0f766e;
+
+    font-size: 19px;
+}
+
+.experience-card .hospital {
+
+    font-weight: bold;
+
+    color: #374151;
+
+    margin-top: 4px;
+}
+
+.experience-card .date {
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   QUALIFICATIONS
+===================================================== */
+
+.qualifications {
+
+    background: #f6f9fb;
+}
+
+.qualification-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 20px;
+}
+
+.qualification {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    border-top: 4px solid #0f766e;
+}
+
+.qualification h3 {
+
+    color: #0f766e;
+
+    font-size: 18px;
+
+    margin-bottom: 6px;
+}
+
+.qualification p {
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.skills {
+
+    background: white;
+}
+
+.skills-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 18px;
+}
+
+.skill {
+
+    background: #f0fdfa;
+
+    color: #115e59;
+
+    padding: 22px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   CERTIFICATES
+===================================================== */
+
+.certificates {
+
+    background: #f6f9fb;
+}
+
+.cert-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 20px;
+}
+
+.cert-card {
+
+    background: white;
+
+    padding: 24px;
+
+    border-radius: 13px;
+
+    border-left: 4px solid #0f766e;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.cert-card h3 {
+
+    color: #102a43;
+
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+.cert-card p {
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+.view-btn {
+
+    display: inline-block;
+
+    background: #0f766e;
+
+    color: white;
+
+    padding: 7px 13px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.view-btn:hover {
+
+    background: #115e59;
+}
+
+
+/* =====================================================
+   RESEARCH
+===================================================== */
+
+.research {
+
+    background: white;
+}
+
+.research-card {
+
+    background: #f8fafc;
+
+    padding: 28px;
+
+    border-radius: 13px;
+
+    border-left: 5px solid #0f766e;
+
+    margin-bottom: 20px;
+}
+
+.research-type {
+
+    color: #0f766e;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 7px;
+}
+
+.research-card h3 {
+
+    color: #102a43;
+
+    font-size: 18px;
+}
+
+.research-card p {
+
+    color: #64748b;
+
     margin-top: 8px;
 }
 
-/* ================= EDITORIAL BOARD ================= */
+
+/* =====================================================
+   EDITORIAL BOARD
+===================================================== */
 
 .editorial {
-    background: #f5f8fb;
+
+    background: #f6f9fb;
 }
 
 .editorial-card {
+
     max-width: 900px;
+
     margin: auto;
+
     background: white;
+
     padding: 35px;
+
     border-radius: 15px;
+
     border-left: 5px solid #0f766e;
+
     box-shadow: 0 8px 25px rgba(0,0,0,0.05);
 }
 
 .editorial-card h3 {
+
     color: #0f766e;
+
     font-size: 23px;
+
     margin-bottom: 8px;
 }
 
 .editorial-card p {
-    color: #6b7280;
+
+    color: #64748b;
 }
 
-/* ================= MAGAZINE PUBLICATIONS ================= */
+
+/* =====================================================
+   PUBLICATIONS
+===================================================== */
 
 .publications {
+
     background: white;
 }
 
 .publication-grid {
+
     display: grid;
+
     grid-template-columns: repeat(2,1fr);
+
     gap: 20px;
 }
 
 .publication {
+
+    padding: 24px;
+
     background: #f8fafc;
-    padding: 25px;
+
     border-radius: 12px;
 }
 
 .publication h3 {
+
     color: #0f766e;
+
     font-size: 18px;
 }
 
 .publication p {
-    color: #6b7280;
+
+    color: #64748b;
+
     font-size: 14px;
 }
 
-/* ================= MEMBERSHIPS ================= */
+
+/* =====================================================
+   MEMBERSHIPS
+===================================================== */
 
 .memberships {
-    background: #f5f8fb;
+
+    background: #f6f9fb;
 }
 
 .membership-grid {
+
     display: grid;
+
     grid-template-columns: repeat(3,1fr);
+
     gap: 20px;
 }
 
 .membership {
-    padding: 25px;
-    border-radius: 12px;
+
     background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
     text-align: center;
+
     border: 1px solid #e5e7eb;
 }
 
 .membership h3 {
+
     color: #115e59;
+
     font-size: 17px;
 }
 
-/* ================= CONTACT ================= */
+
+/* =====================================================
+   CONTACT
+===================================================== */
 
 .contact {
+
     background: #0f766e;
+
     color: white;
 }
 
 .contact .section-title h2 {
+
     color: white;
 }
 
 .contact .section-title p {
+
     color: #ccfbf1;
 }
 
 .contact-grid {
+
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 18px;
 }
 
 .contact-card {
+
     background: rgba(255,255,255,0.1);
-    padding: 30px;
+
+    padding: 25px;
+
     border-radius: 12px;
+
     text-align: center;
 }
 
 .contact-card h3 {
-    margin-bottom: 8px;
+
+    margin-bottom: 7px;
+}
+
+.contact-card a {
+
+    color: white;
+
+    font-size: 14px;
+
+    word-break: break-word;
 }
 
 .contact-card a:hover {
+
     text-decoration: underline;
 }
 
-/* ================= FOOTER ================= */
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer {
+
     background: #064e3b;
+
     color: #d1fae5;
+
     text-align: center;
+
     padding: 25px;
+
     font-size: 14px;
 }
 
-/* ================= MOBILE ================= */
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:900px) {
 
@@ -599,16 +953,16 @@ footer {
         display: none;
     }
 
-    .hero-container {
+    .hero-grid {
         grid-template-columns: 1fr;
         text-align: center;
     }
 
     .hero h1 {
-        font-size: 45px;
+        font-size: 48px;
     }
 
-    .hero p {
+    .hero-description {
         margin: auto;
     }
 
@@ -616,7 +970,15 @@ footer {
         justify-content: center;
     }
 
-    .about-content {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .qualification-grid {
         grid-template-columns: 1fr;
     }
 
@@ -624,8 +986,10 @@ footer {
         grid-template-columns: repeat(2,1fr);
     }
 
-    .course-grid,
-    .cert-grid,
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
     .publication-grid {
         grid-template-columns: 1fr;
     }
@@ -635,44 +999,53 @@ footer {
     }
 
     .contact-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-@media(max-width:500px) {
+@media(max-width:550px) {
+
+    section {
+        padding: 65px 0;
+    }
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 38px;
     }
 
     .hero h2 {
         font-size: 20px;
     }
 
-    .section-title h2 {
-        font-size: 30px;
+    .profile-photo {
+        width: 175px;
+        height: 175px;
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
     }
 
-    section {
-        padding: 65px 18px;
+    .contact-grid {
+        grid-template-columns: 1fr;
     }
 
-    .profile-photo {
-        width: 170px;
-        height: 170px;
+    .section-title h2 {
+        font-size: 30px;
     }
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- ================= NAVIGATION ================= -->
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <nav>
 
@@ -685,12 +1058,17 @@ Dr. B. Sugan
 <ul class="nav-links">
 
 <li><a href="#about">About</a></li>
+
 <li><a href="#education">Education</a></li>
+
 <li><a href="#experience">Experience</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#courses">Courses</a></li>
-<li><a href="#certifications">Certificates</a></li>
+
+<li><a href="#certificates">Certificates</a></li>
+
 <li><a href="#research">Research</a></li>
+
+<li><a href="#publications">Publications</a></li>
+
 <li><a href="#contact">Contact</a></li>
 
 </ul>
@@ -700,43 +1078,80 @@ Dr. B. Sugan
 </nav>
 
 
-<!-- ================= HERO ================= -->
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
-<div class="hero-container">
+<div class="container">
+
+<div class="hero-grid">
+
 
 <div>
 
-<div class="hero-tag">
+<div class="hero-label">
+
 GENERAL SURGERY • EMERGENCY • CRITICAL CARE
+
 </div>
 
+
 <h1>
+
 Dr. B. <span>Sugan</span>
+
 </h1>
 
+
 <h2>
+
 M.S. General Surgery Resident
+
 </h2>
 
-<p>
-MBBS • FIFA Diploma in Football Medicine • DBS • DDN
+
+<p class="hero-description">
+
+MBBS • FIFA Diploma in Football Medicine • Diploma in Behavioral Sciences • Diploma in Diet & Nutrition
+
 </p>
 
-<p style="margin-top:15px;">
+
+<p class="hero-description" style="margin-top:15px;">
+
 General Surgery Resident with clinical experience in
-Emergency Medicine, ICU Care, Trauma and General Surgery.
+General Surgery, Emergency Medicine, Intensive Care and Trauma Care.
+
 </p>
+
 
 <div class="hero-buttons">
 
 <a href="#about" class="btn btn-primary">
-View Profile
+
+Explore Profile
+
 </a>
 
-<a href="#contact" class="btn btn-outline">
-Contact Me
+
+<a href="cv/dr-sugan-cv.pdf"
+target="_blank"
+class="btn btn-outline">
+
+Download CV
+
+</a>
+
+
+<a href="https://www.linkedin.com/in/dr-b-sugan-95516524a/"
+target="_blank"
+class="btn btn-outline">
+
+LinkedIn
+
 </a>
 
 </div>
@@ -744,7 +1159,10 @@ Contact Me
 </div>
 
 
-<div class="hero-card">
+
+<!-- PROFILE -->
+
+<div class="profile-card">
 
 <img
 src="images/profile.jpg"
@@ -752,18 +1170,63 @@ alt="Dr. B. Sugan"
 class="profile-photo"
 >
 
+
 <h3>
+
 Dr. B. Sugan
+
 </h3>
 
+
 <p>
+
 M.S. General Surgery Resident
+
 </p>
 
-<p style="margin-top:10px;">
-Madha Medical College & Research Institute<br>
-Chennai, Tamil Nadu
+
+<p>
+
+Madha Medical College & Research Institute
+
 </p>
+
+
+<p>
+
+Chennai, Tamil Nadu
+
+</p>
+
+
+<div class="social-links">
+
+<a href="mailto:dr.b.sugan@gmail.com">
+
+Email
+
+</a>
+
+
+<a href="https://instagram.com/dr_sugan"
+target="_blank">
+
+Instagram
+
+</a>
+
+
+<a href="https://www.linkedin.com/in/dr-b-sugan-95516524a/"
+target="_blank">
+
+LinkedIn
+
+</a>
+
+</div>
+
+</div>
+
 
 </div>
 
@@ -772,7 +1235,10 @@ Chennai, Tamil Nadu
 </section>
 
 
-<!-- ================= ABOUT ================= -->
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
 <section class="about" id="about">
 
@@ -780,55 +1246,116 @@ Chennai, Tamil Nadu
 
 <div class="section-title">
 
-<h2>About Me</h2>
+<h2>
 
-<p>Professional Profile</p>
+About Me
+
+</h2>
+
+<p>
+
+Professional Profile
+
+</p>
 
 </div>
 
-<div class="about-content">
+
+<div class="about-grid">
+
 
 <div class="about-text">
 
 <p>
+
 I am a General Surgery Resident with clinical experience
-in emergency medicine, critical care, trauma and surgical care.
+in emergency medicine, intensive care, trauma and surgical care.
+
 </p>
 
+
 <p>
+
 My professional interests include General Surgery,
 Emergency Surgery, Critical Care, Trauma Surgery and
 minimally invasive surgical techniques.
+
 </p>
+
 
 <p>
-I am committed to continuous learning, professional development
-and providing high-quality patient care.
+
+I am committed to continuous medical education,
+professional development and delivering high-quality
+patient-centred care.
+
 </p>
 
 </div>
 
-<div class="info-card">
 
-<div>
-<strong>Current Position</strong><br>
+<div class="profile-info">
+
+
+<div class="info-item">
+
+<strong>
+
+Current Position
+
+</strong>
+
+<br>
+
 M.S. General Surgery Resident
+
 </div>
 
-<div>
-<strong>Institution</strong><br>
+
+<div class="info-item">
+
+<strong>
+
+Institution
+
+</strong>
+
+<br>
+
 Madha Medical College and Research Institute
+
 </div>
 
-<div>
-<strong>Location</strong><br>
+
+<div class="info-item">
+
+<strong>
+
+Location
+
+</strong>
+
+<br>
+
 Chennai, Tamil Nadu
+
 </div>
 
-<div>
-<strong>Clinical Interests</strong><br>
+
+<div class="info-item">
+
+<strong>
+
+Clinical Interests
+
+</strong>
+
+<br>
+
 General Surgery • Emergency Care • Critical Care • Trauma
+
 </div>
+
 
 </div>
 
@@ -839,7 +1366,10 @@ General Surgery • Emergency Care • Critical Care • Trauma
 </section>
 
 
-<!-- ================= EDUCATION ================= -->
+
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
 
 <section class="education" id="education">
 
@@ -847,35 +1377,52 @@ General Surgery • Emergency Care • Critical Care • Trauma
 
 <div class="section-title">
 
-<h2>Education</h2>
+<h2>
 
-<p>Academic & Professional Qualifications</p>
+Education & Qualifications
+
+</h2>
+
+<p>
+
+Academic Background
+
+</p>
 
 </div>
+
 
 <div class="timeline">
 
 
-<!-- MS -->
-
 <div class="timeline-item">
 
 <div class="timeline-dot"></div>
 
 <div class="timeline-card">
 
-<h3>M.S. General Surgery</h3>
+<h3>
+
+M.S. General Surgery
+
+</h3>
 
 <div class="date">
+
 February 2025 – Present
+
 </div>
 
 <p>
+
 The Tamil Nadu Dr. M.G.R. Medical University
+
 </p>
 
 <p>
+
 Madha Medical College and Research Institute, Chennai
+
 </p>
 
 </div>
@@ -883,7 +1430,6 @@ Madha Medical College and Research Institute, Chennai
 </div>
 
 
-<!-- MBBS -->
 
 <div class="timeline-item">
 
@@ -891,18 +1437,28 @@ Madha Medical College and Research Institute, Chennai
 
 <div class="timeline-card">
 
-<h3>MBBS</h3>
+<h3>
+
+MBBS
+
+</h3>
 
 <div class="date">
+
 August 2015 – January 2022
+
 </div>
 
 <p>
+
 Pondicherry University
+
 </p>
 
 <p>
+
 Pondicherry Institute of Medical Sciences, Pondicherry
+
 </p>
 
 </div>
@@ -910,7 +1466,6 @@ Pondicherry Institute of Medical Sciences, Pondicherry
 </div>
 
 
-<!-- FIFA -->
 
 <div class="timeline-item">
 
@@ -918,14 +1473,22 @@ Pondicherry Institute of Medical Sciences, Pondicherry
 
 <div class="timeline-card">
 
-<h3>FIFA Diploma in Football Medicine</h3>
+<h3>
+
+FIFA Diploma in Football Medicine
+
+</h3>
 
 <div class="date">
+
 December 2025
+
 </div>
 
 <p>
+
 FIFA
+
 </p>
 
 </div>
@@ -933,7 +1496,6 @@ FIFA
 </div>
 
 
-<!-- DBS -->
 
 <div class="timeline-item">
 
@@ -941,14 +1503,22 @@ FIFA
 
 <div class="timeline-card">
 
-<h3>Diploma in Behavioral Sciences (DBS)</h3>
+<h3>
+
+Diploma in Behavioral Sciences (DBS)
+
+</h3>
 
 <div class="date">
+
 July 2024
+
 </div>
 
 <p>
+
 European Open University / Academia Europe
+
 </p>
 
 </div>
@@ -956,7 +1526,6 @@ European Open University / Academia Europe
 </div>
 
 
-<!-- DDN -->
 
 <div class="timeline-item">
 
@@ -964,14 +1533,22 @@ European Open University / Academia Europe
 
 <div class="timeline-card">
 
-<h3>Diploma in Diet and Nutrition (DDN)</h3>
+<h3>
+
+Diploma in Diet and Nutrition (DDN)
+
+</h3>
 
 <div class="date">
+
 July 2024
+
 </div>
 
 <p>
+
 Oxford Home Study Centre
+
 </p>
 
 </div>
@@ -986,7 +1563,10 @@ Oxford Home Study Centre
 </section>
 
 
-<!-- ================= EXPERIENCE ================= -->
+
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
 
 <section class="experience" id="experience">
 
@@ -994,69 +1574,118 @@ Oxford Home Study Centre
 
 <div class="section-title">
 
-<h2>Professional Experience</h2>
+<h2>
 
-<p>Clinical Experience</p>
+Professional Experience
+
+</h2>
+
+<p>
+
+Clinical Experience
+
+</p>
 
 </div>
 
 
+<div class="experience-grid">
+
+
 <div class="experience-card">
 
-<h3>M.S. General Surgery Resident</h3>
+<h3>
+
+M.S. General Surgery Resident
+
+</h3>
 
 <div class="hospital">
+
 Madha Medical College and Research Institute, Chennai
+
 </div>
 
 <div class="date">
+
 February 2025 – Present
+
 </div>
 
 </div>
+
 
 
 <div class="experience-card">
 
-<h3>DMO – Emergency Room & ICU</h3>
+<h3>
+
+DMO – Emergency Room & ICU
+
+</h3>
 
 <div class="hospital">
+
 Promed Hospitals, Chennai
+
 </div>
 
 <div class="date">
+
 September 2024 – February 2025
+
 </div>
 
 </div>
+
 
 
 <div class="experience-card">
 
-<h3>DMO – Emergency Room & ICU</h3>
+<h3>
+
+DMO – Emergency Room & ICU
+
+</h3>
 
 <div class="hospital">
+
 Voluntary Health Services (VHS), Chennai
+
 </div>
 
 <div class="date">
+
 February 2023 – July 2023
+
 </div>
 
 </div>
+
 
 
 <div class="experience-card">
 
-<h3>Intern</h3>
+<h3>
+
+Intern
+
+</h3>
 
 <div class="hospital">
-Pondicherry Institute of Medical Sciences, Pondicherry
+
+Pondicherry Institute of Medical Sciences
+
 </div>
 
 <div class="date">
+
 January 2022 – January 2023
+
 </div>
+
+</div>
+
 
 </div>
 
@@ -1065,155 +1694,218 @@ January 2022 – January 2023
 </section>
 
 
-<!-- ================= SKILLS ================= -->
 
-<section class="skills" id="skills">
+<!-- =====================================================
+     PROFESSIONAL QUALIFICATIONS
+===================================================== -->
+
+<section class="qualifications">
 
 <div class="container">
 
 <div class="section-title">
 
-<h2>Key Skills</h2>
+<h2>
 
-<p>Professional Strengths</p>
+Professional Qualifications
+
+</h2>
+
+<p>
+
+Additional Training
+
+</p>
 
 </div>
+
+
+<div class="qualification-grid">
+
+
+<div class="qualification">
+
+<h3>
+
+Basic Life Support
+
+</h3>
+
+<p>
+
+BLS
+
+</p>
+
+</div>
+
+
+<div class="qualification">
+
+<h3>
+
+Advanced Cardiac Life Support
+
+</h3>
+
+<p>
+
+ACLS
+
+</p>
+
+</div>
+
+
+<div class="qualification">
+
+<h3>
+
+Cardiopulmonary Resuscitation
+
+</h3>
+
+<p>
+
+CPR
+
+</p>
+
+</div>
+
+
+<div class="qualification">
+
+<h3>
+
+Basic Course in Biomedical Research
+
+</h3>
+
+<p>
+
+National Board of Examinations in Medical Sciences
+
+</p>
+
+</div>
+
+
+<div class="qualification">
+
+<h3>
+
+Basic Course in Biomedical Research
+
+</h3>
+
+<p>
+
+ICMR – National Institute of Epidemiology
+
+</p>
+
+</div>
+
+
+<div class="qualification">
+
+<h3>
+
+FIFA Diploma in Football Medicine
+
+</h3>
+
+<p>
+
+FIFA • December 2025
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section class="skills">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+
+Clinical & Professional Skills
+
+</h2>
+
+</div>
+
 
 <div class="skills-grid">
 
-<div class="skill-card">Communication</div>
-<div class="skill-card">Interpersonal Skills</div>
-<div class="skill-card">Problem Solving</div>
-<div class="skill-card">Emergency Care</div>
-<div class="skill-card">Critical Care</div>
-<div class="skill-card">Surgical Skills</div>
-<div class="skill-card">Team Management</div>
-<div class="skill-card">Clinical Decision Making</div>
+<div class="skill">
 
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= PROFESSIONAL COURSES ================= -->
-
-<section class="courses" id="courses">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Professional Courses</h2>
-
-<p>Additional Professional Training</p>
-
-</div>
-
-<div class="course-grid">
-
-
-<div class="course-card">
-
-<h3>
-FIFA Diploma in Football Medicine
-</h3>
-
-<p>
-December 2025
-</p>
+General Surgery
 
 </div>
 
 
-<div class="course-card">
+<div class="skill">
 
-<h3>
-Diploma in Behavioral Sciences
-</h3>
-
-<p>
-European Open University / Academia Europe • July 2024
-</p>
+Emergency Care
 
 </div>
 
 
-<div class="course-card">
+<div class="skill">
 
-<h3>
-Diploma in Diet and Nutrition
-</h3>
-
-<p>
-Oxford Home Study Centre • July 2024
-</p>
+Critical Care
 
 </div>
 
 
-<div class="course-card">
+<div class="skill">
 
-<h3>
-Basic Life Support (BLS)
-</h3>
-
-<p>
-Save a Life Certifications – National Health Care Provider Solutions
-</p>
+Trauma Care
 
 </div>
 
 
-<div class="course-card">
+<div class="skill">
 
-<h3>
-Advanced Cardiac Life Support (ACLS)
-</h3>
-
-<p>
-Save a Life Certifications – National Health Care Provider Solutions
-</p>
+Clinical Decision Making
 
 </div>
 
 
-<div class="course-card">
+<div class="skill">
 
-<h3>
-Cardiopulmonary Resuscitation (CPR)
-</h3>
-
-<p>
-Save a Life Certifications – National Health Care Provider Solutions
-</p>
+Communication
 
 </div>
 
 
-<div class="course-card">
+<div class="skill">
 
-<h3>
-Basic Course in Biomedical Research
-</h3>
-
-<p>
-National Board of Examinations in Medical Sciences • January 2024
-</p>
+Teamwork
 
 </div>
 
 
-<div class="course-card">
+<div class="skill">
 
-<h3>
-Basic Course in Biomedical Research
-</h3>
-
-<p>
-ICMR – National Institute of Epidemiology • July 2025
-</p>
+Problem Solving
 
 </div>
 
@@ -1225,436 +1917,489 @@ ICMR – National Institute of Epidemiology • July 2025
 </section>
 
 
-<!-- ================= CERTIFICATES ================= -->
 
-<section class="certifications" id="certifications">
+<!-- =====================================================
+     CERTIFICATES
+===================================================== -->
+
+<section class="certificates" id="certificates">
 
 <div class="container">
 
 <div class="section-title">
 
-<h2>Certificates</h2>
+<h2>
 
-<p>Professional & Continuing Medical Education</p>
+Certifications & Courses
+
+</h2>
+
+<p>
+
+Professional Development
+
+</p>
 
 </div>
+
 
 <div class="cert-grid">
 
 
-<div class="cert">
+<!-- 1 -->
 
-<strong>
-FIFA Diploma in Football Medicine
-</strong>
+<div class="cert-card">
 
-<span>
-FIFA • December 2025
-</span>
+<h3>
 
-<a href="certificates/fifa-football-medicine.pdf"
-target="_blank"
-class="view-certificate">
-View Certificate
-</a>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-Diploma in Behavioral Sciences
-</strong>
-
-<span>
-European Open University / Academia Europe • July 2024
-</span>
-
-<a href="certificates/dbs.pdf"
-target="_blank"
-class="view-certificate">
-View Certificate
-</a>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-Diploma in Diet and Nutrition
-</strong>
-
-<span>
-Oxford Home Study Centre • July 2024
-</span>
-
-<a href="certificates/ddn.pdf"
-target="_blank"
-class="view-certificate">
-View Certificate
-</a>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
 Trauma Resuscitation & Critical Care
-</strong>
 
-<span>
-PGIMER, Chandigarh • January 2024
-</span>
+</h3>
+
+<p>
+
+Postgraduate Institute of Medical Education and Research, Chandigarh • January 2024
+
+</p>
 
 <a href="certificates/trauma-resuscitation.pdf"
 target="_blank"
-class="view-certificate">
+class="view-btn">
+
 View Certificate
+
 </a>
 
 </div>
 
 
-<div class="cert">
+<!-- 2 -->
 
-<strong>
-Diabetes and Cardiovascular Diseases
-</strong>
+<div class="cert-card">
 
-<span>
-International Diabetes Federation • July 2024
-</span>
+<h3>
 
-<a href="certificates/diabetes-cardiovascular.pdf"
+FIFA Diploma in Football Medicine
+
+</h3>
+
+<p>
+
+FIFA • December 2025
+
+</p>
+
+<a href="certificates/fifa-football-medicine.pdf"
 target="_blank"
-class="view-certificate">
+class="view-btn">
+
 View Certificate
+
 </a>
 
 </div>
 
 
-<div class="cert">
+<!-- 3 -->
 
-<strong>
-AI Series – Introduction to Healthcare
-</strong>
+<div class="cert-card">
 
-<span>
-Stanford University School of Medicine • January 2024
-</span>
+<h3>
 
-<a href="certificates/ai-healthcare.pdf"
+Diploma in Behavioral Sciences
+
+</h3>
+
+<p>
+
+European Open University / Academia Europe • July 2024
+
+</p>
+
+<a href="certificates/dbs.pdf"
 target="_blank"
-class="view-certificate">
+class="view-btn">
+
 View Certificate
+
 </a>
 
 </div>
 
 
-<div class="cert">
+<!-- 4 -->
 
-<strong>
-Management of Heart Failure in Hospitalized Patients
-</strong>
+<div class="cert-card">
 
-<span>
-American College of Physicians • May 2024
-</span>
+<h3>
 
-<a href="certificates/heart-failure.pdf"
+Diploma in Diet & Nutrition
+
+</h3>
+
+<p>
+
+Oxford Home Study Centre • July 2024
+
+</p>
+
+<a href="certificates/ddn.pdf"
 target="_blank"
-class="view-certificate">
+class="view-btn">
+
 View Certificate
+
 </a>
 
 </div>
 
 
-<div class="cert">
+<!-- 5 -->
 
-<strong>
-Advanced E-Hypertension Academy
-</strong>
+<div class="cert-card">
 
-<span>
-Association of Physicians of India • January 2024
-</span>
+<h3>
 
-<a href="certificates/e-hypertension.pdf"
-target="_blank"
-class="view-certificate">
-View Certificate
-</a>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-ECG – Heart's Electrical Activity
-</strong>
-
-<span>
-Cardiological Society of India • January 2024
-</span>
-
-<a href="certificates/ecg.pdf"
-target="_blank"
-class="view-certificate">
-View Certificate
-</a>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-Essentials of Palliative Care
-</strong>
-
-<span>
-Stanford University School of Medicine • December 2024
-</span>
-
-<a href="certificates/palliative-care.pdf"
-target="_blank"
-class="view-certificate">
-View Certificate
-</a>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-Care of Patients with Respiratory Failure
-</strong>
-
-<span>
-Stanford University School of Medicine • December 2022
-</span>
-
-<a href="certificates/respiratory-failure.pdf"
-target="_blank"
-class="view-certificate">
-View Certificate
-</a>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-Pain Management – Acute Pain Management
-</strong>
-
-<span>
-Stanford University School of Medicine • December 2022
-</span>
-
-<a href="certificates/pain-management.pdf"
-target="_blank"
-class="view-certificate">
-View Certificate
-</a>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-Introduction to Food and Health
-</strong>
-
-<span>
-Stanford University • June 2021
-</span>
-
-<a href="certificates/food-health.pdf"
-target="_blank"
-class="view-certificate">
-View Certificate
-</a>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
 Mechanical Ventilation for COVID-19
-</strong>
 
-<span>
+</h3>
+
+<p>
+
 Harvard Medical School • May 2021
-</span>
+
+</p>
 
 <a href="certificates/mechanical-ventilation.pdf"
 target="_blank"
-class="view-certificate">
+class="view-btn">
+
 View Certificate
+
 </a>
 
 </div>
 
 
-<div class="cert">
+<!-- 6 -->
 
-<strong>
-Introduction to Nipah Virus
-</strong>
+<div class="cert-card">
 
-<span>
-World Health Organization • December 2022
-</span>
+<h3>
 
-<a href="certificates/nipah.pdf"
+EMT Foundations
+
+</h3>
+
+<p>
+
+University of Colorado • November 2021
+
+</p>
+
+<a href="certificates/emt-foundations.pdf"
 target="_blank"
-class="view-certificate">
+class="view-btn">
+
 View Certificate
+
 </a>
 
 </div>
 
 
-<div class="cert">
+<!-- 7 -->
 
-<strong>
-Meningitis – Introduction
-</strong>
+<div class="cert-card">
 
-<span>
-World Health Organization • May 2022
-</span>
+<h3>
 
-<a href="certificates/meningitis.pdf"
-target="_blank"
-class="view-certificate">
-View Certificate
-</a>
+Medical Emergencies: Airway, Breathing & Circulation
 
-</div>
+</h3>
 
+<p>
 
-<div class="cert">
+University of Colorado • May 2022
 
-<strong>
-Inequality Monitoring in HIV, TB and Malaria
-</strong>
-
-<span>
-World Health Organization • June 2022
-</span>
-
-<a href="certificates/inequality-hiv-tb-malaria.pdf"
-target="_blank"
-class="view-certificate">
-View Certificate
-</a>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-Transmission Based Precautions
-</strong>
-
-<span>
-World Health Organization • May 2021
-</span>
-
-<a href="certificates/transmission-precautions.pdf"
-target="_blank"
-class="view-certificate">
-View Certificate
-</a>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-Vital Signs – Understanding What the Body Is Telling Us
-</strong>
-
-<span>
-University of Pennsylvania • June 2021
-</span>
-
-<a href="certificates/vital-signs.pdf"
-target="_blank"
-class="view-certificate">
-View Certificate
-</a>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-EMT Foundation – Specialization Course
-</strong>
-
-<span>
-University of Colorado System • November 2021
-</span>
-
-<a href="certificates/emt-foundation.pdf"
-target="_blank"
-class="view-certificate">
-View Certificate
-</a>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-Diabetes – The Essential Facts
-</strong>
-
-<span>
-University of Copenhagen • July 2021
-</span>
-
-<a href="certificates/diabetes-essential.pdf"
-target="_blank"
-class="view-certificate">
-View Certificate
-</a>
-
-</div>
-
-
-<div class="cert">
-
-<strong>
-Medical Emergencies – Airway, Breathing, Circulation
-</strong>
-
-<span>
-University of Colorado System • May 2022
-</span>
+</p>
 
 <a href="certificates/medical-emergencies.pdf"
 target="_blank"
-class="view-certificate">
+class="view-btn">
+
 View Certificate
+
+</a>
+
+</div>
+
+
+<!-- 8 -->
+
+<div class="cert-card">
+
+<h3>
+
+Transmission-Based Precautions
+
+</h3>
+
+<p>
+
+World Health Organization • May 2021
+
+</p>
+
+<a href="certificates/transmission-precautions.pdf"
+target="_blank"
+class="view-btn">
+
+View Certificate
+
+</a>
+
+</div>
+
+
+<!-- 9 -->
+
+<div class="cert-card">
+
+<h3>
+
+Integrating Palliative Care in Health
+
+</h3>
+
+<p>
+
+IACFM & Cloud Palliative Care • October 31
+
+</p>
+
+<a href="certificates/integrating-palliative-care.pdf"
+target="_blank"
+class="view-btn">
+
+View Certificate
+
+</a>
+
+</div>
+
+
+<!-- 10 -->
+
+<div class="cert-card">
+
+<h3>
+
+Vital Signs: Understanding What the Body Is Telling Us
+
+</h3>
+
+<p>
+
+University of Pennsylvania • June 2021
+
+</p>
+
+<a href="certificates/vital-signs.pdf"
+target="_blank"
+class="view-btn">
+
+View Certificate
+
+</a>
+
+</div>
+
+
+<!-- 11 -->
+
+<div class="cert-card">
+
+<h3>
+
+Essentials of Palliative Care
+
+</h3>
+
+<p>
+
+Stanford University School of Medicine • November 2021
+
+</p>
+
+<a href="certificates/palliative-care-2021.pdf"
+target="_blank"
+class="view-btn">
+
+View Certificate
+
+</a>
+
+</div>
+
+
+<!-- 12 -->
+
+<div class="cert-card">
+
+<h3>
+
+Stanford Introduction to Food and Health
+
+</h3>
+
+<p>
+
+Stanford University School of Medicine • June 2021
+
+</p>
+
+<a href="certificates/food-and-health.pdf"
+target="_blank"
+class="view-btn">
+
+View Certificate
+
+</a>
+
+</div>
+
+
+<!-- 13 -->
+
+<div class="cert-card">
+
+<h3>
+
+Pain Management: Acute Pain Management
+
+</h3>
+
+<p>
+
+Stanford University School of Medicine • December 2021
+
+</p>
+
+<a href="certificates/pain-management.pdf"
+target="_blank"
+class="view-btn">
+
+View Certificate
+
+</a>
+
+</div>
+
+
+<!-- 14 -->
+
+<div class="cert-card">
+
+<h3>
+
+Transition from Acute to Chronic Pain After Surgery
+
+</h3>
+
+<p>
+
+Stanford University School of Medicine • October 2020 – October 2023
+
+</p>
+
+<a href="certificates/acute-to-chronic-pain.pdf"
+target="_blank"
+class="view-btn">
+
+View Certificate
+
+</a>
+
+</div>
+
+
+<!-- 15 -->
+
+<div class="cert-card">
+
+<h3>
+
+Essentials of Palliative Care
+
+</h3>
+
+<p>
+
+Stanford University School of Medicine • December 2022
+
+</p>
+
+<a href="certificates/palliative-care-2022.pdf"
+target="_blank"
+class="view-btn">
+
+View Certificate
+
+</a>
+
+</div>
+
+
+<!-- 16 -->
+
+<div class="cert-card">
+
+<h3>
+
+Care of Patients with Respiratory Failure
+
+</h3>
+
+<p>
+
+Stanford University School of Medicine • December 2022
+
+</p>
+
+<a href="certificates/respiratory-failure.pdf"
+target="_blank"
+class="view-btn">
+
+View Certificate
+
+</a>
+
+</div>
+
+
+<!-- 17 -->
+
+<div class="cert-card">
+
+<h3>
+
+Diabetes – The Essential Facts
+
+</h3>
+
+<p>
+
+University of Copenhagen • July 2021
+
+</p>
+
+<a href="certificates/diabetes-essential.pdf"
+target="_blank"
+class="view-btn">
+
+View Certificate
+
 </a>
 
 </div>
@@ -1667,81 +2412,96 @@ View Certificate
 </section>
 
 
-<!-- ================= RESEARCH ================= -->
 
-<section class="presentations" id="research">
+<!-- =====================================================
+     RESEARCH
+===================================================== -->
+
+<section class="research" id="research">
 
 <div class="container">
 
 <div class="section-title">
 
-<h2>Research & Presentations</h2>
+<h2>
 
-<p>Academic Contributions</p>
+Research & Presentations
+
+</h2>
+
+<p>
+
+Academic Work
+
+</p>
 
 </div>
 
 
-<div class="presentation-card">
+<div class="research-card">
 
-<div class="presentation-type">
-Poster Presentation
+<div class="research-type">
+
+Poster Presentation • TNASICON 2026
+
 </div>
 
 <h3>
+
 Overcoming the Challenging Threat — Meleney's Gangrene:
 A Case Report
-</h3>
 
-<p>
-TNASICON 2026
-</p>
+</h3>
 
 </div>
 
 
-<div class="presentation-card">
+<div class="research-card">
 
-<div class="presentation-type">
-Poster Presentation
+<div class="research-type">
+
+Poster Presentation • TNASICON 2026
+
 </div>
 
 <h3>
+
 Comparison of Diathermy Versus Steel Scalpel Skin Incisions
 in Abdominal Surgeries: A Prospective Study
-</h3>
 
-<p>
-TNASICON 2026
-</p>
+</h3>
 
 </div>
 
 
-<div class="presentation-card">
+<div class="research-card">
 
-<div class="presentation-type">
-Paper Presentation
+<div class="research-type">
+
+Paper Presentation • TNASICON 2026
+
 </div>
 
 <h3>
+
 Comparing the Efficacy of Adhesive Skin Glue with Conventional
 Skin Suturing in Clean Surgical Procedures at a Tertiary Care Center:
 A Prospective Comparative Study
+
 </h3>
 
-<p>
-TNASICON 2026
-</p>
-
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- ================= EDITORIAL BOARD ================= -->
+
+<!-- =====================================================
+     EDITORIAL BOARD
+===================================================== -->
 
 <section class="editorial">
 
@@ -1749,9 +2509,17 @@ TNASICON 2026
 
 <div class="section-title">
 
-<h2>Editorial Board</h2>
+<h2>
 
-<p>Academic & Editorial Responsibilities</p>
+Editorial Board
+
+</h2>
+
+<p>
+
+Academic & Editorial Activities
+
+</p>
 
 </div>
 
@@ -1759,34 +2527,40 @@ TNASICON 2026
 <div class="editorial-card">
 
 <h3>
+
 Editorial Board Member
+
 </h3>
 
 <p>
+
 <strong>
-Journal of AI and Integrative Medicine (JAIIM)
+
+Journal of AI and Integrative Medicine
+
 </strong>
+
 </p>
 
 <p>
+
 Novadex Publications
+
 </p>
 
 <p>
+
 2026 – Present
+
 </p>
 
 <p style="margin-top:15px;">
-Editorial Board Member contributing to the academic and
-editorial activities of the Journal of AI and Integrative Medicine.
-</p>
 
-<a href="https://journals.novadexpub.com/"
-target="_blank"
-class="view-certificate"
-style="margin-top:15px;">
-Visit Journal
-</a>
+Editorial Board Member contributing to the academic
+and editorial activities of the Journal of AI and
+Integrative Medicine.
+
+</p>
 
 </div>
 
@@ -1795,68 +2569,168 @@ Visit Journal
 </section>
 
 
-<!-- ================= MAGAZINE PUBLICATIONS ================= -->
 
-<section class="publications">
+<!-- =====================================================
+     MAGAZINE PUBLICATIONS
+===================================================== -->
+
+<section class="publications" id="publications">
 
 <div class="container">
 
 <div class="section-title">
 
-<h2>Magazine Publications</h2>
+<h2>
 
-<p>Published Articles</p>
+Magazine Publications
+
+</h2>
+
+<p>
+
+Published Articles
+
+</p>
 
 </div>
+
 
 <div class="publication-grid">
 
 
 <div class="publication">
-<h3>Anger</h3>
-<p>Homeopathy Magazine • September 2017</p>
+
+<h3>
+
+Anger
+
+</h3>
+
+<p>
+
+Homeopathy Magazine • September 2017
+
+</p>
+
 </div>
 
 
 <div class="publication">
-<h3>Immunity</h3>
-<p>Homeopathy Magazine • July 2016</p>
+
+<h3>
+
+Immunity
+
+</h3>
+
+<p>
+
+Homeopathy Magazine • July 2016
+
+</p>
+
 </div>
 
 
 <div class="publication">
-<h3>Heart</h3>
-<p>Homeopathy Magazine • January 2016</p>
+
+<h3>
+
+Heart
+
+</h3>
+
+<p>
+
+Homeopathy Magazine • January 2016
+
+</p>
+
 </div>
 
 
 <div class="publication">
-<h3>Viral Infections</h3>
-<p>Homeopathy Magazine • April 2017</p>
+
+<h3>
+
+Viral Infections
+
+</h3>
+
+<p>
+
+Homeopathy Magazine • April 2017
+
+</p>
+
 </div>
 
 
 <div class="publication">
-<h3>Ulcer</h3>
-<p>Health and Beauty Magazine • December 2017</p>
+
+<h3>
+
+Ulcer
+
+</h3>
+
+<p>
+
+Health and Beauty Magazine • December 2017
+
+</p>
+
 </div>
 
 
 <div class="publication">
-<h3>What to Ask a Doctor</h3>
-<p>Health and Beauty Magazine • November 2017</p>
+
+<h3>
+
+What to Ask a Doctor
+
+</h3>
+
+<p>
+
+Health and Beauty Magazine • November 2017
+
+</p>
+
 </div>
 
 
 <div class="publication">
-<h3>Asthma</h3>
-<p>Health and Beauty Magazine • September 2017</p>
+
+<h3>
+
+Asthma
+
+</h3>
+
+<p>
+
+Health and Beauty Magazine • September 2017
+
+</p>
+
 </div>
 
 
 <div class="publication">
-<h3>Stroke</h3>
-<p>Health and Beauty Magazine • July 2017</p>
+
+<h3>
+
+Stroke
+
+</h3>
+
+<p>
+
+Health and Beauty Magazine • July 2017
+
+</p>
+
 </div>
 
 
@@ -1867,7 +2741,10 @@ Visit Journal
 </section>
 
 
-<!-- ================= MEMBERSHIPS ================= -->
+
+<!-- =====================================================
+     MEMBERSHIPS
+===================================================== -->
 
 <section class="memberships">
 
@@ -1875,9 +2752,17 @@ Visit Journal
 
 <div class="section-title">
 
-<h2>Memberships & Volunteering</h2>
+<h2>
 
-<p>Professional Associations</p>
+Professional Memberships
+
+</h2>
+
+<p>
+
+Associations & Memberships
+
+</p>
 
 </div>
 
@@ -1888,11 +2773,15 @@ Visit Journal
 <div class="membership">
 
 <h3>
+
 Associations of Surgeons of India
+
 </h3>
 
 <p>
+
 Member • July 2026
+
 </p>
 
 </div>
@@ -1901,11 +2790,15 @@ Member • July 2026
 <div class="membership">
 
 <h3>
+
 World Medical Association
+
 </h3>
 
 <p>
+
 Associate Member • January 2024
+
 </p>
 
 </div>
@@ -1914,11 +2807,15 @@ Associate Member • January 2024
 <div class="membership">
 
 <h3>
+
 European Society of Cardiology
+
 </h3>
 
 <p>
+
 Associate Member • February 2024
+
 </p>
 
 </div>
@@ -1927,11 +2824,15 @@ Associate Member • February 2024
 <div class="membership">
 
 <h3>
-IASSS
+
+IASSS – International Association of Student Surgical Societies
+
 </h3>
 
 <p>
+
 Member • February 2024
+
 </p>
 
 </div>
@@ -1940,11 +2841,15 @@ Member • February 2024
 <div class="membership">
 
 <h3>
+
 American College of Physicians
+
 </h3>
 
 <p>
+
 Member • January 2024
+
 </p>
 
 </div>
@@ -1953,11 +2858,15 @@ Member • January 2024
 <div class="membership">
 
 <h3>
+
 Indiana Public Health Association
+
 </h3>
 
 <p>
+
 Member • January 2024
+
 </p>
 
 </div>
@@ -1966,12 +2875,15 @@ Member • January 2024
 <div class="membership">
 
 <h3>
-International Society for Evolution,
-Medicine & Public Health
+
+International Society for Evolution, Medicine & Public Health
+
 </h3>
 
 <p>
+
 Member
+
 </p>
 
 </div>
@@ -1984,7 +2896,10 @@ Member
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
 <section class="contact" id="contact">
 
@@ -1992,9 +2907,17 @@ Member
 
 <div class="section-title">
 
-<h2>Contact</h2>
+<h2>
 
-<p>Get in Touch</p>
+Contact
+
+</h2>
+
+<p>
+
+Professional Contact Information
+
+</p>
 
 </div>
 
@@ -2004,10 +2927,16 @@ Member
 
 <div class="contact-card">
 
-<h3>Phone</h3>
+<h3>
+
+Phone
+
+</h3>
 
 <a href="tel:+919790908042">
+
 +91 97909 08042
+
 </a>
 
 </div>
@@ -2015,10 +2944,16 @@ Member
 
 <div class="contact-card">
 
-<h3>Email</h3>
+<h3>
+
+Email
+
+</h3>
 
 <a href="mailto:dr.b.sugan@gmail.com">
+
 dr.b.sugan@gmail.com
+
 </a>
 
 </div>
@@ -2026,11 +2961,17 @@ dr.b.sugan@gmail.com
 
 <div class="contact-card">
 
-<h3>Instagram</h3>
+<h3>
+
+Instagram
+
+</h3>
 
 <a href="https://instagram.com/dr_sugan"
 target="_blank">
+
 @dr_sugan
+
 </a>
 
 </div>
@@ -2038,11 +2979,17 @@ target="_blank">
 
 <div class="contact-card">
 
-<h3>LinkedIn</h3>
+<h3>
+
+LinkedIn
+
+</h3>
 
 <a href="https://www.linkedin.com/in/dr-b-sugan-95516524a/"
 target="_blank">
+
 Dr. B. Sugan
+
 </a>
 
 </div>
@@ -2055,20 +3002,28 @@ Dr. B. Sugan
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
 <p>
+
 © 2026 Dr. B. Sugan. All Rights Reserved.
+
 </p>
 
 <p style="margin-top:5px;">
+
 M.S. General Surgery Resident • Chennai, India
+
 </p>
 
 </footer>
 
+
 </body>
+
 </html>
-```
